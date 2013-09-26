@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5307D9E17F4D09100114E7A /* SSVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5307D9C17F4D09100114E7A /* SSVLoginViewController.m */; };
+		F5307D9F17F4D09100114E7A /* SSVLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */; };
+		F5658B9017EFA6B1005845E4 /* Cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5658B8F17EFA6B1005845E4 /* Cross@2x.png */; };
+		F5658B9817EFAB12005845E4 /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = F5658B9717EFAB12005845E4 /* Gear.png */; };
+		F591D03517EE1BF800803F54 /* SSVMyschoolChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F591D03417EE1BF800803F54 /* SSVMyschoolChecker.m */; };
+		F5A845CA17EE235E003F9A83 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A845C517EE235E003F9A83 /* TFHpple.m */; };
+		F5A845CB17EE235E003F9A83 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A845C717EE235E003F9A83 /* TFHppleElement.m */; };
+		F5A845CC17EE235E003F9A83 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A845C917EE235E003F9A83 /* XPathQuery.m */; };
+		F5A845CE17EE23D2003F9A83 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A845CD17EE23D2003F9A83 /* libxml2.dylib */; };
+		F5D4725A17ED10600043DDC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4725917ED10600043DDC9 /* Foundation.framework */; };
+		F5D4725C17ED10600043DDC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4725B17ED10600043DDC9 /* CoreGraphics.framework */; };
+		F5D4725E17ED10600043DDC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4725D17ED10600043DDC9 /* UIKit.framework */; };
+		F5D4726417ED10600043DDC9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5D4726217ED10600043DDC9 /* InfoPlist.strings */; };
+		F5D4726617ED10600043DDC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D4726517ED10600043DDC9 /* main.m */; };
+		F5D4726A17ED10600043DDC9 /* SSVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D4726917ED10600043DDC9 /* SSVAppDelegate.m */; };
+		F5D4727217ED10600043DDC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D4727117ED10600043DDC9 /* Images.xcassets */; };
+		F5D4727917ED10600043DDC9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4727817ED10600043DDC9 /* XCTest.framework */; };
+		F5D4727A17ED10600043DDC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4725917ED10600043DDC9 /* Foundation.framework */; };
+		F5D4727B17ED10600043DDC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4725D17ED10600043DDC9 /* UIKit.framework */; };
+		F5D4728317ED10600043DDC9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5D4728117ED10600043DDC9 /* InfoPlist.strings */; };
+		F5D4728517ED10600043DDC9 /* MyschoolCheckerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D4728417ED10600043DDC9 /* MyschoolCheckerTests.m */; };
+		F5D4729017ED15100043DDC9 /* SSVTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D4728F17ED12030043DDC9 /* SSVTableViewController.m */; };
+		F5D4729317ED15790043DDC9 /* SSVDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D4729217ED15790043DDC9 /* SSVDataStore.m */; };
+		F5D4729617ED17630043DDC9 /* SSVAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D4729517ED17630043DDC9 /* SSVAssignment.m */; };
+		F5E2FA5917EF8166007B5CBF /* SSVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2FA5817EF8165007B5CBF /* SSVCell.m */; };
+		F5E2FA5B17EF818C007B5CBF /* SSVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E2FA5A17EF818C007B5CBF /* SSVCell.xib */; };
+		F5E2FA5E17EF8616007B5CBF /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = F5E2FA5D17EF8616007B5CBF /* check.png */; };
+		F5E2FA6017EF8E0C007B5CBF /* Cross.png in Resources */ = {isa = PBXBuildFile; fileRef = F5E2FA5F17EF8E0C007B5CBF /* Cross.png */; };
+		F5E85DB517F0E63200893105 /* SSVDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E85DB317F0E63200893105 /* SSVDetailViewController.m */; };
+		F5E85DB617F0E63200893105 /* SSVDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E85DB417F0E63200893105 /* SSVDetailViewController.xib */; };
+		F5E85DB917F0F57100893105 /* SSVCustomURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E85DB817F0F57100893105 /* SSVCustomURLProtocol.m */; };
+		F5E85DBC17F1A64A00893105 /* SSVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E85DBB17F1A64A00893105 /* SSVUser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5D4727C17ED10600043DDC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5D4724E17ED105F0043DDC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5D4725517ED105F0043DDC9;
+			remoteInfo = MyschoolChecker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5307D9B17F4D09100114E7A /* SSVLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVLoginViewController.h; sourceTree = "<group>"; };
+		F5307D9C17F4D09100114E7A /* SSVLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVLoginViewController.m; sourceTree = "<group>"; };
+		F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVLoginViewController.xib; sourceTree = "<group>"; };
+		F5658B8F17EFA6B1005845E4 /* Cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cross@2x.png"; sourceTree = "<group>"; };
+		F5658B9117EFA703005845E4 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		F5658B9717EFAB12005845E4 /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
+		F591D03317EE1BF800803F54 /* SSVMyschoolChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVMyschoolChecker.h; sourceTree = "<group>"; };
+		F591D03417EE1BF800803F54 /* SSVMyschoolChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVMyschoolChecker.m; sourceTree = "<group>"; };
+		F5A845C417EE235E003F9A83 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		F5A845C517EE235E003F9A83 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		F5A845C617EE235E003F9A83 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		F5A845C717EE235E003F9A83 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		F5A845C817EE235E003F9A83 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		F5A845C917EE235E003F9A83 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		F5A845CD17EE23D2003F9A83 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		F5D4725617ED10600043DDC9 /* MyschoolChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyschoolChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D4725917ED10600043DDC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F5D4725B17ED10600043DDC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F5D4725D17ED10600043DDC9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F5D4726117ED10600043DDC9 /* MyschoolChecker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyschoolChecker-Info.plist"; sourceTree = "<group>"; };
+		F5D4726317ED10600043DDC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F5D4726517ED10600043DDC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5D4726717ED10600043DDC9 /* MyschoolChecker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyschoolChecker-Prefix.pch"; sourceTree = "<group>"; };
+		F5D4726817ED10600043DDC9 /* SSVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSVAppDelegate.h; sourceTree = "<group>"; };
+		F5D4726917ED10600043DDC9 /* SSVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSVAppDelegate.m; sourceTree = "<group>"; };
+		F5D4727117ED10600043DDC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F5D4727717ED10600043DDC9 /* MyschoolCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyschoolCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D4727817ED10600043DDC9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F5D4728017ED10600043DDC9 /* MyschoolCheckerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyschoolCheckerTests-Info.plist"; sourceTree = "<group>"; };
+		F5D4728217ED10600043DDC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F5D4728417ED10600043DDC9 /* MyschoolCheckerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyschoolCheckerTests.m; sourceTree = "<group>"; };
+		F5D4728E17ED12030043DDC9 /* SSVTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSVTableViewController.h; sourceTree = "<group>"; };
+		F5D4728F17ED12030043DDC9 /* SSVTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSVTableViewController.m; sourceTree = "<group>"; };
+		F5D4729117ED15790043DDC9 /* SSVDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVDataStore.h; sourceTree = "<group>"; };
+		F5D4729217ED15790043DDC9 /* SSVDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVDataStore.m; sourceTree = "<group>"; };
+		F5D4729417ED17630043DDC9 /* SSVAssignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVAssignment.h; sourceTree = "<group>"; };
+		F5D4729517ED17630043DDC9 /* SSVAssignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVAssignment.m; sourceTree = "<group>"; };
+		F5E2FA5717EF8165007B5CBF /* SSVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVCell.h; sourceTree = "<group>"; };
+		F5E2FA5817EF8165007B5CBF /* SSVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVCell.m; sourceTree = "<group>"; };
+		F5E2FA5A17EF818C007B5CBF /* SSVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVCell.xib; sourceTree = "<group>"; };
+		F5E2FA5D17EF8616007B5CBF /* check.png */ = {isa = PBXFileReference; explicitFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		F5E2FA5F17EF8E0C007B5CBF /* Cross.png */ = {isa = PBXFileReference; explicitFileType = image.png; path = Cross.png; sourceTree = "<group>"; };
+		F5E85DB217F0E63200893105 /* SSVDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVDetailViewController.h; sourceTree = "<group>"; };
+		F5E85DB317F0E63200893105 /* SSVDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVDetailViewController.m; sourceTree = "<group>"; };
+		F5E85DB417F0E63200893105 /* SSVDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVDetailViewController.xib; sourceTree = "<group>"; };
+		F5E85DB717F0F57100893105 /* SSVCustomURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVCustomURLProtocol.h; sourceTree = "<group>"; };
+		F5E85DB817F0F57100893105 /* SSVCustomURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVCustomURLProtocol.m; sourceTree = "<group>"; };
+		F5E85DBA17F1A64A00893105 /* SSVUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVUser.h; sourceTree = "<group>"; };
+		F5E85DBB17F1A64A00893105 /* SSVUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVUser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5D4725317ED105F0043DDC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A845CE17EE23D2003F9A83 /* libxml2.dylib in Frameworks */,
+				F5D4725C17ED10600043DDC9 /* CoreGraphics.framework in Frameworks */,
+				F5D4725E17ED10600043DDC9 /* UIKit.framework in Frameworks */,
+				F5D4725A17ED10600043DDC9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5D4727417ED10600043DDC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D4727917ED10600043DDC9 /* XCTest.framework in Frameworks */,
+				F5D4727B17ED10600043DDC9 /* UIKit.framework in Frameworks */,
+				F5D4727A17ED10600043DDC9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5A845C317EE2352003F9A83 /* hpple */ = {
+			isa = PBXGroup;
+			children = (
+				F5A845C417EE235E003F9A83 /* TFHpple.h */,
+				F5A845C517EE235E003F9A83 /* TFHpple.m */,
+				F5A845C617EE235E003F9A83 /* TFHppleElement.h */,
+				F5A845C717EE235E003F9A83 /* TFHppleElement.m */,
+				F5A845C817EE235E003F9A83 /* XPathQuery.h */,
+				F5A845C917EE235E003F9A83 /* XPathQuery.m */,
+			);
+			name = hpple;
+			sourceTree = "<group>";
+		};
+		F5D4724D17ED105F0043DDC9 = {
+			isa = PBXGroup;
+			children = (
+				F5D4725F17ED10600043DDC9 /* MyschoolChecker */,
+				F5D4727E17ED10600043DDC9 /* MyschoolCheckerTests */,
+				F5D4725817ED10600043DDC9 /* Frameworks */,
+				F5D4725717ED10600043DDC9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5D4725717ED10600043DDC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5D4725617ED10600043DDC9 /* MyschoolChecker.app */,
+				F5D4727717ED10600043DDC9 /* MyschoolCheckerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5D4725817ED10600043DDC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5A845CD17EE23D2003F9A83 /* libxml2.dylib */,
+				F5D4725917ED10600043DDC9 /* Foundation.framework */,
+				F5D4725B17ED10600043DDC9 /* CoreGraphics.framework */,
+				F5D4725D17ED10600043DDC9 /* UIKit.framework */,
+				F5D4727817ED10600043DDC9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5D4725F17ED10600043DDC9 /* MyschoolChecker */ = {
+			isa = PBXGroup;
+			children = (
+				F5E2FA5C17EF8602007B5CBF /* Images */,
+				F5D4726817ED10600043DDC9 /* SSVAppDelegate.h */,
+				F5D4726917ED10600043DDC9 /* SSVAppDelegate.m */,
+				F5E85DB217F0E63200893105 /* SSVDetailViewController.h */,
+				F5E85DB317F0E63200893105 /* SSVDetailViewController.m */,
+				F5E85DB417F0E63200893105 /* SSVDetailViewController.xib */,
+				F5307D9B17F4D09100114E7A /* SSVLoginViewController.h */,
+				F5307D9C17F4D09100114E7A /* SSVLoginViewController.m */,
+				F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */,
+				F5E85DB717F0F57100893105 /* SSVCustomURLProtocol.h */,
+				F5E85DB817F0F57100893105 /* SSVCustomURLProtocol.m */,
+				F5E85DBA17F1A64A00893105 /* SSVUser.h */,
+				F5E85DBB17F1A64A00893105 /* SSVUser.m */,
+				F5E2FA5717EF8165007B5CBF /* SSVCell.h */,
+				F5E2FA5817EF8165007B5CBF /* SSVCell.m */,
+				F5E2FA5A17EF818C007B5CBF /* SSVCell.xib */,
+				F591D03317EE1BF800803F54 /* SSVMyschoolChecker.h */,
+				F591D03417EE1BF800803F54 /* SSVMyschoolChecker.m */,
+				F5D4729217ED15790043DDC9 /* SSVDataStore.m */,
+				F5D4729117ED15790043DDC9 /* SSVDataStore.h */,
+				F5D4729417ED17630043DDC9 /* SSVAssignment.h */,
+				F5D4729517ED17630043DDC9 /* SSVAssignment.m */,
+				F5D4728E17ED12030043DDC9 /* SSVTableViewController.h */,
+				F5D4728F17ED12030043DDC9 /* SSVTableViewController.m */,
+				F5A845C317EE2352003F9A83 /* hpple */,
+				F5D4727117ED10600043DDC9 /* Images.xcassets */,
+				F5D4726017ED10600043DDC9 /* Supporting Files */,
+			);
+			path = MyschoolChecker;
+			sourceTree = "<group>";
+		};
+		F5D4726017ED10600043DDC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5D4726117ED10600043DDC9 /* MyschoolChecker-Info.plist */,
+				F5D4726217ED10600043DDC9 /* InfoPlist.strings */,
+				F5D4726517ED10600043DDC9 /* main.m */,
+				F5D4726717ED10600043DDC9 /* MyschoolChecker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5D4727E17ED10600043DDC9 /* MyschoolCheckerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5D4728417ED10600043DDC9 /* MyschoolCheckerTests.m */,
+				F5D4727F17ED10600043DDC9 /* Supporting Files */,
+			);
+			path = MyschoolCheckerTests;
+			sourceTree = "<group>";
+		};
+		F5D4727F17ED10600043DDC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5D4728017ED10600043DDC9 /* MyschoolCheckerTests-Info.plist */,
+				F5D4728117ED10600043DDC9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5E2FA5C17EF8602007B5CBF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F5658B9717EFAB12005845E4 /* Gear.png */,
+				F5658B9117EFA703005845E4 /* check@2x.png */,
+				F5658B8F17EFA6B1005845E4 /* Cross@2x.png */,
+				F5E2FA5F17EF8E0C007B5CBF /* Cross.png */,
+				F5E2FA5D17EF8616007B5CBF /* check.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5D4725517ED105F0043DDC9 /* MyschoolChecker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5D4728817ED10600043DDC9 /* Build configuration list for PBXNativeTarget "MyschoolChecker" */;
+			buildPhases = (
+				F5D4725217ED105F0043DDC9 /* Sources */,
+				F5D4725317ED105F0043DDC9 /* Frameworks */,
+				F5D4725417ED105F0043DDC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyschoolChecker;
+			productName = MyschoolChecker;
+			productReference = F5D4725617ED10600043DDC9 /* MyschoolChecker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5D4727617ED10600043DDC9 /* MyschoolCheckerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5D4728B17ED10600043DDC9 /* Build configuration list for PBXNativeTarget "MyschoolCheckerTests" */;
+			buildPhases = (
+				F5D4727317ED10600043DDC9 /* Sources */,
+				F5D4727417ED10600043DDC9 /* Frameworks */,
+				F5D4727517ED10600043DDC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5D4727D17ED10600043DDC9 /* PBXTargetDependency */,
+			);
+			name = MyschoolCheckerTests;
+			productName = MyschoolCheckerTests;
+			productReference = F5D4727717ED10600043DDC9 /* MyschoolCheckerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5D4724E17ED105F0043DDC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SSV;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Kári Tristan Helgason";
+				TargetAttributes = {
+					F5D4727617ED10600043DDC9 = {
+						TestTargetID = F5D4725517ED105F0043DDC9;
+					};
+				};
+			};
+			buildConfigurationList = F5D4725117ED105F0043DDC9 /* Build configuration list for PBXProject "MyschoolChecker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5D4724D17ED105F0043DDC9;
+			productRefGroup = F5D4725717ED10600043DDC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5D4725517ED105F0043DDC9 /* MyschoolChecker */,
+				F5D4727617ED10600043DDC9 /* MyschoolCheckerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5D4725417ED105F0043DDC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5658B9817EFAB12005845E4 /* Gear.png in Resources */,
+				F5E85DB617F0E63200893105 /* SSVDetailViewController.xib in Resources */,
+				F5E2FA5E17EF8616007B5CBF /* check.png in Resources */,
+				F5307D9F17F4D09100114E7A /* SSVLoginViewController.xib in Resources */,
+				F5D4727217ED10600043DDC9 /* Images.xcassets in Resources */,
+				F5E2FA5B17EF818C007B5CBF /* SSVCell.xib in Resources */,
+				F5658B9017EFA6B1005845E4 /* Cross@2x.png in Resources */,
+				F5E2FA6017EF8E0C007B5CBF /* Cross.png in Resources */,
+				F5D4726417ED10600043DDC9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5D4727517ED10600043DDC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D4728317ED10600043DDC9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5D4725217ED105F0043DDC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D4729317ED15790043DDC9 /* SSVDataStore.m in Sources */,
+				F5D4729017ED15100043DDC9 /* SSVTableViewController.m in Sources */,
+				F5A845CC17EE235E003F9A83 /* XPathQuery.m in Sources */,
+				F5E85DBC17F1A64A00893105 /* SSVUser.m in Sources */,
+				F5E85DB517F0E63200893105 /* SSVDetailViewController.m in Sources */,
+				F5307D9E17F4D09100114E7A /* SSVLoginViewController.m in Sources */,
+				F5D4726617ED10600043DDC9 /* main.m in Sources */,
+				F5E2FA5917EF8166007B5CBF /* SSVCell.m in Sources */,
+				F5D4726A17ED10600043DDC9 /* SSVAppDelegate.m in Sources */,
+				F591D03517EE1BF800803F54 /* SSVMyschoolChecker.m in Sources */,
+				F5A845CB17EE235E003F9A83 /* TFHppleElement.m in Sources */,
+				F5E85DB917F0F57100893105 /* SSVCustomURLProtocol.m in Sources */,
+				F5D4729617ED17630043DDC9 /* SSVAssignment.m in Sources */,
+				F5A845CA17EE235E003F9A83 /* TFHpple.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5D4727317ED10600043DDC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D4728517ED10600043DDC9 /* MyschoolCheckerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5D4727D17ED10600043DDC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5D4725517ED105F0043DDC9 /* MyschoolChecker */;
+			targetProxy = F5D4727C17ED10600043DDC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5D4726217ED10600043DDC9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5D4726317ED10600043DDC9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F5D4728117ED10600043DDC9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5D4728217ED10600043DDC9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5D4728617ED10600043DDC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F5D4728717ED10600043DDC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5D4728917ED10600043DDC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyschoolChecker/MyschoolChecker-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "MyschoolChecker/MyschoolChecker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F5D4728A17ED10600043DDC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyschoolChecker/MyschoolChecker-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "MyschoolChecker/MyschoolChecker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F5D4728C17ED10600043DDC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyschoolChecker.app/MyschoolChecker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyschoolChecker/MyschoolChecker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MyschoolCheckerTests/MyschoolCheckerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F5D4728D17ED10600043DDC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyschoolChecker.app/MyschoolChecker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyschoolChecker/MyschoolChecker-Prefix.pch";
+				INFOPLIST_FILE = "MyschoolCheckerTests/MyschoolCheckerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5D4725117ED105F0043DDC9 /* Build configuration list for PBXProject "MyschoolChecker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5D4728617ED10600043DDC9 /* Debug */,
+				F5D4728717ED10600043DDC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5D4728817ED10600043DDC9 /* Build configuration list for PBXNativeTarget "MyschoolChecker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5D4728917ED10600043DDC9 /* Debug */,
+				F5D4728A17ED10600043DDC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5D4728B17ED10600043DDC9 /* Build configuration list for PBXNativeTarget "MyschoolCheckerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5D4728C17ED10600043DDC9 /* Debug */,
+				F5D4728D17ED10600043DDC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5D4724E17ED105F0043DDC9 /* Project object */;
+}
