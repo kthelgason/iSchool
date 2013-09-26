@@ -28,6 +28,31 @@
     return self;
 }
 
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    [self setLoginName:[aDecoder valueForKey:@"loginName"]];
+    [self setPassword:[aDecoder valueForKey:@"password"]];
+    return self;
+}
+
+-(NSString*)userDataPath{
+    NSArray* docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* document = [docDirs objectAtIndex:0];
+    return [document stringByAppendingPathComponent:@"user.archive"];
+}
+
+
+-(BOOL)saveChanges{
+    NSString* path = [self userDataPath];
+    return [NSKeyedArchiver archiveRootObject:self toFile:path];
+}
+
+
+// Encode user data on exit
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:loginName forKey:@"loginName"];
+    [aCoder encodeObject:password forKey:@"password"];
+}
+
 -(NSString*)getAuth{
     NSString* string = [NSString stringWithFormat:@"%@:%@",[self loginName],[self password]];
     NSString *base64EncodedString = [[string dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
