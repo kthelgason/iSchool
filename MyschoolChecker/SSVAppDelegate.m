@@ -32,16 +32,6 @@
     // set it as root view controller
     [[self window] setRootViewController:nav];
     
-    NSFileManager *filemgr = [NSFileManager defaultManager];
-    
-    NSString* dataPath = [[SSVUser user]userDataPath];
-    
-    // Check if the file already exists
-    if ([filemgr fileExistsAtPath: dataPath])
-    {
-        SSVUser* user = [SSVUser user];
-        user = [NSKeyedUnarchiver unarchiveObjectWithFile:dataPath];
-    }
     return YES;
 
 }
@@ -55,13 +45,6 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     // Archive the user data to file to be loaded when application launches
-    
-    BOOL success = [[SSVUser user]saveChanges];
-    if(success){
-        NSLog(@"Saved user data!");
-    } else {
-        NSLog(@"Could not save data :(");
-    }
     
 }
 
