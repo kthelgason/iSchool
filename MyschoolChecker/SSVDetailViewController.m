@@ -8,7 +8,6 @@
 
 #import "SSVDetailViewController.h"
 #import "SSVMyschoolChecker.h"
-#import "SSVUser.h"
 #import "SSVAssignment.h"
 
 @interface SSVDetailViewController ()
@@ -36,7 +35,7 @@
 
     NSURL* fullUrl = [NSURL URLWithString:urlString];
     
-    NSString* basicAuthentication = [[SSVUser user]getAuth];
+    NSString* basicAuthentication = [[NSUserDefaults standardUserDefaults] stringForKey:@"Authentication"];
     NSMutableURLRequest* urlRequest = [[NSMutableURLRequest alloc] initWithURL:fullUrl];
     [urlRequest setValue:basicAuthentication forHTTPHeaderField:@"Authorization"];
     

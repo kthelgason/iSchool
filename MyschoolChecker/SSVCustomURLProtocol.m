@@ -7,7 +7,6 @@
 //
 
 #import "SSVCustomURLProtocol.h"
-#import "SSVUser.h"
 
 @implementation SSVCustomURLProtocol
 
@@ -35,7 +34,7 @@ static NSString *AUTHORIZED_REQUEST_HEADER = @"X-AUTHORIZED";
     NSMutableURLRequest *customRequest = [request mutableCopy];
     [customRequest setValue:@"" forHTTPHeaderField:[AUTHORIZED_REQUEST_HEADER stringByAppendingString:[request.URL absoluteString]]];
 
-    NSString* basicAuthentication = [[SSVUser user]getAuth];
+    NSString* basicAuthentication = [[NSUserDefaults standardUserDefaults] valueForKey:@"Authentication"];
     
     [customRequest setValue:basicAuthentication forHTTPHeaderField:@"Authorization"];
     
@@ -44,7 +43,7 @@ static NSString *AUTHORIZED_REQUEST_HEADER = @"X-AUTHORIZED";
 
 - (void) startLoading
 {
-    NSString* basicAuthentication = [[SSVUser user]getAuth];
+    NSString* basicAuthentication = [[NSUserDefaults standardUserDefaults] valueForKey:@"Authentication"];
     
     [_customRequest setValue:basicAuthentication forHTTPHeaderField:@"Authorization"];
     _connection = [NSURLConnection connectionWithRequest:_customRequest delegate:self];
