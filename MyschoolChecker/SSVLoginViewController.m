@@ -29,6 +29,11 @@ int BOTTOM_CONSTRAINT = 214;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // This fixes a bug on 3,5 inch screens, where the login screen goes lower and lower each time you log out.
+    BOTTOM_CONSTRAINT = 214;
+    
+    
     // Do any additional setup after loading the view from its nib.
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
     {
