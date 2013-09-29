@@ -7,7 +7,6 @@
 //
 
 #import "SSVMyschoolChecker.h"
-#import "SSVUser.h"
 #import "TFHpple.h"
 
 @implementation SSVMyschoolChecker
@@ -15,8 +14,7 @@
 + (NSArray*)fetchAssignments{
     NSURL* myschoolConnection = [NSURL URLWithString:@"https://myschool.ru.is/myschool/?Page=Exe&ID=1.12"];
     
-    NSString* basicAuthentication = [[SSVUser user]getAuth];
-    
+    NSString* basicAuthentication = [[NSUserDefaults standardUserDefaults] objectForKey:@"Authentication"];
     NSMutableURLRequest* urlRequest = [[NSMutableURLRequest alloc] initWithURL:myschoolConnection];
     [urlRequest setValue:basicAuthentication forHTTPHeaderField:@"Authorization"];
     NSData* requestData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];

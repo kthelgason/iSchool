@@ -7,7 +7,6 @@
 //
 
 #import "SSVLoginViewController.h"
-#import "SSVUser.h"
 
 @interface SSVLoginViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyboardHeight;
@@ -64,9 +63,16 @@ int BOTTOM_CONSTRAINT = 214;
 
 - (IBAction)submit:(id)sender {
     NSLog(@"Submit");
-    SSVUser* user = [SSVUser user];
-    user.loginName = [[self loginNameField] text];
-    user.password = [[self passwordField] text];
+    NSString* username = [[self loginNameField] text];
+    NSString* password = [[self passwordField] text];
+    
+    NSString* string = [NSString stringWithFormat:@"%@:%@",username, password];
+    NSString *base64EncodedString = [[string dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
+    NSString* basicAuthentication = [NSString stringWithFormat:@"Basic %@",base64EncodedString];
+    
+    [[NSUserDefaults standardUserDefaults] setValue:basicAuthentication forKey:@"Authentication"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 
 }
