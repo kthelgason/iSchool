@@ -57,6 +57,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"SSVTableViewController: viewWillAppear");
     SSVUser* user = [SSVUser user];
     // if there is no user prompt for deets
     if(!user.loginName && !user.password){

@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSVLoginViewController">
             <connections>
+                <outlet property="keyboardHeight" destination="sIR-ZP-21q" id="zx8-ZL-Nwt"/>
+                <outlet property="logInButton" destination="sUh-4M-EmV" id="6fg-Pd-OkV"/>
                 <outlet property="loginNameField" destination="wYJ-P0-5rG" id="rXf-CK-nYd"/>
                 <outlet property="passwordField" destination="TTZ-74-dvg" id="S9m-fW-yTZ"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -16,26 +18,35 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYJ-P0-5rG">
-                    <rect key="frame" x="60" y="220" width="200" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYJ-P0-5rG">
+                    <rect key="frame" x="60" y="220" width="201" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldDidEndEditing:" destination="-1" eventType="editingDidEndOnExit" id="TnX-7t-3fK"/>
+                    </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TTZ-74-dvg">
-                    <rect key="frame" x="60" y="258" width="200" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TTZ-74-dvg">
+                    <rect key="frame" x="60" y="258" width="201" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <connections>
+                        <action selector="textFieldDidEndEditing:" destination="-1" eventType="editingDidEndOnExit" id="UE4-BR-pwh"/>
+                    </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUh-4M-EmV">
-                    <rect key="frame" x="60" y="315" width="200" height="39"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUh-4M-EmV">
+                    <rect key="frame" x="60" y="315" width="201" height="39"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="Y8V-GK-Mrk"/>
+                    </constraints>
                     <state key="normal" title="Log In">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,12 +55,30 @@
                         <action selector="submit:" destination="-1" eventType="touchUpInside" id="qwz-Uy-AYY"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="centered_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZGA-X5-ymr">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="centered_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZGA-X5-ymr">
                     <rect key="frame" x="16" y="51" width="288" height="151"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="151" id="3aV-pz-wxF"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="sUh-4M-EmV" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="60" id="0N7-iA-lla"/>
+                <constraint firstItem="sUh-4M-EmV" firstAttribute="trailing" secondItem="TTZ-74-dvg" secondAttribute="trailing" id="DFx-Cc-TLZ"/>
+                <constraint firstItem="sUh-4M-EmV" firstAttribute="leading" secondItem="TTZ-74-dvg" secondAttribute="leading" id="Dsj-IL-F8f"/>
+                <constraint firstItem="sUh-4M-EmV" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="KNk-M7-vh8"/>
+                <constraint firstItem="TTZ-74-dvg" firstAttribute="top" secondItem="wYJ-P0-5rG" secondAttribute="bottom" constant="8" id="QL6-gp-asm"/>
+                <constraint firstItem="sUh-4M-EmV" firstAttribute="leading" secondItem="wYJ-P0-5rG" secondAttribute="leading" id="Tb1-oI-ceE"/>
+                <constraint firstItem="sUh-4M-EmV" firstAttribute="trailing" secondItem="wYJ-P0-5rG" secondAttribute="trailing" id="Y69-aO-Psu"/>
+                <constraint firstItem="sUh-4M-EmV" firstAttribute="centerX" secondItem="ZGA-X5-ymr" secondAttribute="centerX" id="fB6-YD-pvs"/>
+                <constraint firstItem="ZGA-X5-ymr" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="16" id="hAl-Ys-SkD"/>
+                <constraint firstItem="wYJ-P0-5rG" firstAttribute="top" secondItem="ZGA-X5-ymr" secondAttribute="bottom" constant="18" id="npY-n3-zo7"/>
+                <constraint firstAttribute="trailing" secondItem="ZGA-X5-ymr" secondAttribute="trailing" constant="16" id="pCm-qe-zeo"/>
+                <constraint firstAttribute="bottom" secondItem="sUh-4M-EmV" secondAttribute="bottom" constant="214" id="sIR-ZP-21q"/>
+                <constraint firstItem="sUh-4M-EmV" firstAttribute="top" secondItem="TTZ-74-dvg" secondAttribute="bottom" constant="27" id="yXq-SR-5Sw"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
