@@ -13,6 +13,7 @@
 		F5658B9017EFA6B1005845E4 /* Cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5658B8F17EFA6B1005845E4 /* Cross@2x.png */; };
 		F5658B9817EFAB12005845E4 /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = F5658B9717EFAB12005845E4 /* Gear.png */; };
 		F591D03517EE1BF800803F54 /* SSVMyschoolChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F591D03417EE1BF800803F54 /* SSVMyschoolChecker.m */; };
+		F59AEF8317F9826400D6AA28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59AEF8217F9826400D6AA28 /* Main.storyboard */; };
 		F5A845CA17EE235E003F9A83 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A845C517EE235E003F9A83 /* TFHpple.m */; };
 		F5A845CB17EE235E003F9A83 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A845C717EE235E003F9A83 /* TFHppleElement.m */; };
 		F5A845CC17EE235E003F9A83 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A845C917EE235E003F9A83 /* XPathQuery.m */; };
@@ -61,6 +62,7 @@
 		F5658B9717EFAB12005845E4 /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
 		F591D03317EE1BF800803F54 /* SSVMyschoolChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVMyschoolChecker.h; sourceTree = "<group>"; };
 		F591D03417EE1BF800803F54 /* SSVMyschoolChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVMyschoolChecker.m; sourceTree = "<group>"; };
+		F59AEF8217F9826400D6AA28 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F5A845C417EE235E003F9A83 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		F5A845C517EE235E003F9A83 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		F5A845C617EE235E003F9A83 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */,
 				F5E85DB717F0F57100893105 /* SSVCustomURLProtocol.h */,
 				F5E85DB817F0F57100893105 /* SSVCustomURLProtocol.m */,
+				F59AEF8217F9826400D6AA28 /* Main.storyboard */,
 				F5E2FA5717EF8165007B5CBF /* SSVCell.h */,
 				F5E2FA5817EF8165007B5CBF /* SSVCell.m */,
 				F5E2FA5A17EF818C007B5CBF /* SSVCell.xib */,
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5658B9817EFAB12005845E4 /* Gear.png in Resources */,
+				F59AEF8317F9826400D6AA28 /* Main.storyboard in Resources */,
 				F5E85DB617F0E63200893105 /* SSVDetailViewController.xib in Resources */,
 				F5E2FA5E17EF8616007B5CBF /* check.png in Resources */,
 				F5307D9F17F4D09100114E7A /* SSVLoginViewController.xib in Resources */,

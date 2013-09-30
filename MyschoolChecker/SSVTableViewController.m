@@ -22,7 +22,7 @@
         UINavigationItem* u = [self navigationItem];
         [u setTitle:@"Assignments due"];
         
-        UIBarButtonItem *logOutButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Cross.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(logOut)];
+        UIBarButtonItem *logOutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStyleBordered target:self action:@selector(logOut)];
         self.navigationItem.rightBarButtonItem = logOutButton;
     }
     return self;

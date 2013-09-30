@@ -7,6 +7,7 @@
 //
 
 #import "SSVLoginViewController.h"
+#import "SSVMyschoolChecker.h"
 
 @interface SSVLoginViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyboardHeight;
@@ -68,23 +69,30 @@ int BOTTOM_CONSTRAINT = 214;
 
 - (IBAction)submit:(id)sender {
     NSLog(@"Submit");
+    [[self invalidLabel] setHidden:YES];
+    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     NSString* username = [[self loginNameField] text];
     NSString* password = [[self passwordField] text];
     
     NSString* string = [NSString stringWithFormat:@"%@:%@",username, password];
     NSString *base64EncodedString = [[string dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
     NSString* basicAuthentication = [NSString stringWithFormat:@"Basic %@",base64EncodedString];
-    
     [[NSUserDefaults standardUserDefaults] setValue:basicAuthentication forKey:@"Authentication"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    if([SSVMyschoolChecker checkAuthstring:basicAuthentication]){
+        [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [[self invalidLabel] setHidden:NO];
+    }
 
 }
 
 
 
 // Some copy/paste function to add gradient to the login button.
+// not sure i like this...
 -(void) addGradient:(UIButton *) _button {
     
     // Add Border
