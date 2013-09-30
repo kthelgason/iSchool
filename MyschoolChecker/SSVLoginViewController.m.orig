@@ -67,11 +67,17 @@ int BOTTOM_CONSTRAINT = 214;
     // Dispose of any resources that can be recreated.
 }
 
+<<<<<<< HEAD
+- (IBAction)submit:(id)sender
+{
+    [self dismissKeyboard];
+=======
 - (IBAction)submit:(id)sender {
     NSLog(@"Submit");
     [[self invalidLabel] setHidden:YES];
     [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+>>>>>>> 1d5060fd54f9576b5e3b0adb4907280b29148768
     NSString* username = [[self loginNameField] text];
     NSString* password = [[self passwordField] text];
     

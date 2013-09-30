@@ -12,5 +12,7 @@
 
 + (NSArray*)fetchAssignments;
 
++ (BOOL)checkAuthstring:(NSString*)authString;
+
 
 @end

@@ -21,11 +21,13 @@
     [urlRequest setValue:basicAuthentication forHTTPHeaderField:@"Authorization"];
     NSData* requestData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
     
-    
-    TFHpple* htmlParser = [TFHpple hppleWithHTMLData:requestData];
-    NSString* XpathQueryString = @"//div[@class='ruContentPage']/center/table[@class='ruTable']/tbody/tr";
-    
-    NSArray *Nodes = [htmlParser searchWithXPathQuery:XpathQueryString];
+    NSArray* Nodes;
+    if(requestData){
+        TFHpple* htmlParser = [TFHpple hppleWithHTMLData:requestData];
+        NSString* XpathQueryString = @"//div[@class='ruContentPage']/center/table[@class='ruTable']/tbody/tr";
+        
+        Nodes = [htmlParser searchWithXPathQuery:XpathQueryString];
+    }
 //    for (TFHppleElement* element in Nodes) {
 //        if([element hasChildren]){
 //            for(TFHppleElement* child in [element children]){
@@ -35,6 +37,10 @@
 //    }
 
     return Nodes;
+}
+
++ (BOOL)checkAuthstring:(NSString*)authString{
+    return [[SSVMyschoolChecker fetchAssignments] count] == 0 ? NO : YES;
 }
 
 
