@@ -13,6 +13,7 @@
 #import "SSVMyschoolChecker.h"
 #import "SSVLoginViewController.h"
 #import "SSVCell.h"
+#import "SSVCustomURLProtocol.h"
 
 @implementation SSVTableViewController
 
@@ -108,7 +109,8 @@
 {
     [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    [self viewWillAppear:YES];
+    SSVLoginViewController* loginView = [[SSVLoginViewController alloc] init];
+    [self presentViewController:loginView animated:YES completion:nil];
 }
 
 // Code for table header. Trying to go without for now
