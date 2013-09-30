@@ -9,7 +9,6 @@
 #import "SSVTableViewController.h"
 #import "SSVAssignment.h"
 #import "SSVDataStore.h"
-#import "SSVUser.h"
 #import "SSVDetailViewController.h"
 #import "SSVMyschoolChecker.h"
 #import "SSVLoginViewController.h"
@@ -22,6 +21,9 @@
     if(self){
         UINavigationItem* u = [self navigationItem];
         [u setTitle:@"Assignments due"];
+        
+        UIBarButtonItem *logOutButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Cross.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(logOut)];
+        self.navigationItem.rightBarButtonItem = logOutButton;
     }
     return self;
 }
@@ -57,14 +59,15 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    SSVUser* user = [SSVUser user];
-    // if there is no user prompt for deets
-    if(!user.loginName && !user.password){
+    
+    if(![[NSUserDefaults standardUserDefaults] stringForKey:@"Authentication"])
+    {
         SSVLoginViewController* loginView = [[SSVLoginViewController alloc] init];
         [self presentViewController:loginView animated:animated completion:nil];
     }
     //otherwise load data as usual
-    else{
+    else
+    {
         NSArray* data = [SSVMyschoolChecker fetchAssignments];
         SSVDataStore* dataStore = [SSVDataStore sharedStore];
         [dataStore populateData:data];
@@ -99,6 +102,13 @@
     [ds populateData:[SSVMyschoolChecker fetchAssignments]];
     [self.tableView reloadData];
     [[self refreshControl]endRefreshing];
+}
+
+-(void)logOut
+{
+    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self viewWillAppear:YES];
 }
 
 // Code for table header. Trying to go without for now

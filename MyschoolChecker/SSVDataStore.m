@@ -45,9 +45,9 @@
 // Needs refactoring
 -(void)populateData:(NSArray*)data{
     
-    
     for(int i = 0; i < [data count] - 1; i++){
         [allAssignments addObject:[[SSVAssignment alloc] init]];
+        
     }
     int editing = 0;
     for (TFHppleElement* element in data) {

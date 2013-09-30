@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		983F497A17F8B23C002A6583 /* centered_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 983F497917F8B23C002A6583 /* centered_white.png */; };
 		F5307D9E17F4D09100114E7A /* SSVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5307D9C17F4D09100114E7A /* SSVLoginViewController.m */; };
 		F5307D9F17F4D09100114E7A /* SSVLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */; };
 		F5658B9017EFA6B1005845E4 /* Cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5658B8F17EFA6B1005845E4 /* Cross@2x.png */; };
@@ -38,7 +39,6 @@
 		F5E85DB517F0E63200893105 /* SSVDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E85DB317F0E63200893105 /* SSVDetailViewController.m */; };
 		F5E85DB617F0E63200893105 /* SSVDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E85DB417F0E63200893105 /* SSVDetailViewController.xib */; };
 		F5E85DB917F0F57100893105 /* SSVCustomURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E85DB817F0F57100893105 /* SSVCustomURLProtocol.m */; };
-		F5E85DBC17F1A64A00893105 /* SSVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E85DBB17F1A64A00893105 /* SSVUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		983F497917F8B23C002A6583 /* centered_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centered_white.png; sourceTree = "<group>"; };
 		F5307D9B17F4D09100114E7A /* SSVLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVLoginViewController.h; sourceTree = "<group>"; };
 		F5307D9C17F4D09100114E7A /* SSVLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVLoginViewController.m; sourceTree = "<group>"; };
 		F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVLoginViewController.xib; sourceTree = "<group>"; };
@@ -67,7 +68,7 @@
 		F5A845C817EE235E003F9A83 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		F5A845C917EE235E003F9A83 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		F5A845CD17EE23D2003F9A83 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		F5D4725617ED10600043DDC9 /* MyschoolChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyschoolChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D4725617ED10600043DDC9 /* iSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D4725917ED10600043DDC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5D4725B17ED10600043DDC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F5D4725D17ED10600043DDC9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -99,8 +100,6 @@
 		F5E85DB417F0E63200893105 /* SSVDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVDetailViewController.xib; sourceTree = "<group>"; };
 		F5E85DB717F0F57100893105 /* SSVCustomURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVCustomURLProtocol.h; sourceTree = "<group>"; };
 		F5E85DB817F0F57100893105 /* SSVCustomURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVCustomURLProtocol.m; sourceTree = "<group>"; };
-		F5E85DBA17F1A64A00893105 /* SSVUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVUser.h; sourceTree = "<group>"; };
-		F5E85DBB17F1A64A00893105 /* SSVUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +153,7 @@
 		F5D4725717ED10600043DDC9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5D4725617ED10600043DDC9 /* MyschoolChecker.app */,
+				F5D4725617ED10600043DDC9 /* iSchool.app */,
 				F5D4727717ED10600043DDC9 /* MyschoolCheckerTests.xctest */,
 			);
 			name = Products;
@@ -186,8 +185,6 @@
 				F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */,
 				F5E85DB717F0F57100893105 /* SSVCustomURLProtocol.h */,
 				F5E85DB817F0F57100893105 /* SSVCustomURLProtocol.m */,
-				F5E85DBA17F1A64A00893105 /* SSVUser.h */,
-				F5E85DBB17F1A64A00893105 /* SSVUser.m */,
 				F5E2FA5717EF8165007B5CBF /* SSVCell.h */,
 				F5E2FA5817EF8165007B5CBF /* SSVCell.m */,
 				F5E2FA5A17EF818C007B5CBF /* SSVCell.xib */,
@@ -238,6 +235,7 @@
 		F5E2FA5C17EF8602007B5CBF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				983F497917F8B23C002A6583 /* centered_white.png */,
 				F5658B9717EFAB12005845E4 /* Gear.png */,
 				F5658B9117EFA703005845E4 /* check@2x.png */,
 				F5658B8F17EFA6B1005845E4 /* Cross@2x.png */,
@@ -264,7 +262,7 @@
 			);
 			name = MyschoolChecker;
 			productName = MyschoolChecker;
-			productReference = F5D4725617ED10600043DDC9 /* MyschoolChecker.app */;
+			productReference = F5D4725617ED10600043DDC9 /* iSchool.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F5D4727617ED10600043DDC9 /* MyschoolCheckerTests */ = {
@@ -331,6 +329,7 @@
 				F5D4727217ED10600043DDC9 /* Images.xcassets in Resources */,
 				F5E2FA5B17EF818C007B5CBF /* SSVCell.xib in Resources */,
 				F5658B9017EFA6B1005845E4 /* Cross@2x.png in Resources */,
+				983F497A17F8B23C002A6583 /* centered_white.png in Resources */,
 				F5E2FA6017EF8E0C007B5CBF /* Cross.png in Resources */,
 				F5D4726417ED10600043DDC9 /* InfoPlist.strings in Resources */,
 			);
@@ -354,7 +353,6 @@
 				F5D4729317ED15790043DDC9 /* SSVDataStore.m in Sources */,
 				F5D4729017ED15100043DDC9 /* SSVTableViewController.m in Sources */,
 				F5A845CC17EE235E003F9A83 /* XPathQuery.m in Sources */,
-				F5E85DBC17F1A64A00893105 /* SSVUser.m in Sources */,
 				F5E85DB517F0E63200893105 /* SSVDetailViewController.m in Sources */,
 				F5307D9E17F4D09100114E7A /* SSVLoginViewController.m in Sources */,
 				F5D4726617ED10600043DDC9 /* main.m in Sources */,
@@ -484,7 +482,7 @@
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "MyschoolChecker/MyschoolChecker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iSchool;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -499,7 +497,7 @@
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "MyschoolChecker/MyschoolChecker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iSchool;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
