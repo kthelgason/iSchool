@@ -69,6 +69,10 @@ int BOTTOM_CONSTRAINT = 214;
 
 - (IBAction)submit:(id)sender {
     NSLog(@"Submit");
+    
+    // Do not remove. There's a reason for this...
+    [self dismissKeyboard];
+    
     [[self invalidLabel] setHidden:YES];
     [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
     [[NSUserDefaults standardUserDefaults] synchronize];

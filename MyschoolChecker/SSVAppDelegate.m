@@ -51,8 +51,8 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
-    //[[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
-    //[[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:dateKey];
     
     return YES;
