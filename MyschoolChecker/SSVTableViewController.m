@@ -54,6 +54,9 @@
     [refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
     UINib* nib = [UINib nibWithNibName:@"SSVCell" bundle:nil];
     
+    // Remove empty cells
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     // Register the nib that contains the cell
     [[self tableView] registerNib:nib forCellReuseIdentifier:@"SSVCell"];
     self.refreshControl = refreshControl;

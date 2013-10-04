@@ -68,7 +68,6 @@ int BOTTOM_CONSTRAINT = 214;
 }
 
 - (IBAction)submit:(id)sender {
-    NSLog(@"Submit");
     
     // Do not remove. There's a reason for this...
     [self dismissKeyboard];
@@ -82,12 +81,20 @@ int BOTTOM_CONSTRAINT = 214;
     NSString* string = [NSString stringWithFormat:@"%@:%@",username, password];
     NSString *base64EncodedString = [[string dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
     NSString* basicAuthentication = [NSString stringWithFormat:@"Basic %@",base64EncodedString];
+    
+    // This has to be here for the check below to work.
     [[NSUserDefaults standardUserDefaults] setValue:basicAuthentication forKey:@"Authentication"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    if([SSVMyschoolChecker checkAuthstring:basicAuthentication]){
+    if([SSVMyschoolChecker checkAuthstring:basicAuthentication])
+    {
         [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
-    } else {
+    }
+    else
+    {
+        // Set to nil if the authentication is invalid.
+        [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         [[self invalidLabel] setHidden:NO];
     }
 

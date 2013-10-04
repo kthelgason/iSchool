@@ -23,6 +23,7 @@
     // Create new TableViewController
     SSVTableViewController* tvc = [[SSVTableViewController alloc ] initWithStyle:UITableViewStylePlain];
     
+    
     // Create UINavigationController
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:tvc];
 
@@ -51,8 +52,8 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
-    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    //[[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
+    //[[NSUserDefaults standardUserDefaults] synchronize];
     [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:dateKey];
     
     return YES;
