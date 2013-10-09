@@ -11,6 +11,7 @@
 #import "SSVLoginViewController.h"
 #import "SSVCustomURLProtocol.h"
 #import "SSVMyschoolChecker.h"
+#import "SSVGradesTableViewController.h"
 #import "SSVDataStore.h"
 
 @implementation SSVAppDelegate
@@ -20,16 +21,25 @@
     // Override point for customization after application launch.
     [NSURLProtocol registerClass:[SSVCustomURLProtocol class]];
     
+    // Create Tab bar controller
+    UITabBarController* tbc = [[UITabBarController alloc] init];
+    [[tbc tabBar] setBarStyle:UIBarStyleDefault];
+    [[tbc tabBar] setTintColor:[UIColor redColor]];
+    [[tbc tabBar] setTranslucent:NO];
+    
     // Create new TableViewController
     SSVTableViewController* tvc = [[SSVTableViewController alloc ] initWithStyle:UITableViewStylePlain];
+    SSVGradesTableViewController* gtvc = [[SSVGradesTableViewController alloc]init];
     
     // Create UINavigationController
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:tvc];
+    UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:gtvc];
 
     [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
     
-    // set it as root view controller
-    [[self window] setRootViewController:nav];
+    [tbc setViewControllers:[NSArray arrayWithObjects:nav, nav2, nil]];
+
+    [[self window] setRootViewController:tbc];
     
     
     

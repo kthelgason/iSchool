@@ -13,14 +13,16 @@
 @interface SSVDataStore : NSObject
 {
     NSMutableArray* allAssignments;
+    NSMutableArray* allGrades;
 }
+
 + (SSVDataStore*)sharedStore;
 - (void)emptyDataStore;
-- (void)populateData:(NSArray*)data;
+- (void)populateAssignments:(NSArray*)data;
+- (void)populateGrades:(NSArray*)data;
 
 // Accessors/mutators
 - (NSArray*)allAssignments;
-
-
+- (NSArray*)allGrades;
 
 @end

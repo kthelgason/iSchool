@@ -37,6 +37,32 @@
     return Nodes;
 }
 
++ (NSArray*)fetchGrades{
+    NSURL* myschoolConnection = [NSURL URLWithString:@"https://myschool.ru.is/myschool/?Page=Exe&ID=1.12"];
+    
+    NSString* basicAuthentication = [[NSUserDefaults standardUserDefaults] objectForKey:@"Authentication"];
+    NSMutableURLRequest* urlRequest = [[NSMutableURLRequest alloc] initWithURL:myschoolConnection];
+    [urlRequest setValue:basicAuthentication forHTTPHeaderField:@"Authorization"];
+    NSData* requestData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
+    
+    NSArray* Nodes;
+    if(requestData){
+        TFHpple* htmlParser = [TFHpple hppleWithHTMLData:requestData];
+        NSString* XpathQueryString = @"//div[@class='ruContentPage']/center[2]/table/tbody/tr";
+        
+        Nodes = [htmlParser searchWithXPathQuery:XpathQueryString];
+    }
+    for (TFHppleElement* element in Nodes) {
+        if([element hasChildren]){
+            for(TFHppleElement* child in [element children]){
+                NSLog([child text]);
+            }
+        }
+    }
+    
+    return Nodes;
+}
+
 + (BOOL)checkAuthstring:(NSString*)authString{
     return [[SSVMyschoolChecker fetchAssignments] count] == 0 ? NO : YES;
 }

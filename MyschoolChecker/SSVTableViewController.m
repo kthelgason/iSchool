@@ -17,21 +17,23 @@
 @implementation SSVTableViewController
 
 - (id)init{
-    self = [super initWithStyle:UITableViewStylePlain];
+    return [self initWithNibName:nil bundle:nil];
+}
+
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self){
         UINavigationItem* u = [self navigationItem];
         [u setTitle:@"Assignments due"];
+        UITabBarItem* tabItem = [self tabBarItem];
+        [tabItem setTitle:@"Assignments"];
+        [tabItem setImage:[UIImage imageNamed:@"Files.png"]];
         
         UIBarButtonItem *logOutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStyleBordered target:self action:@selector(logOut)];
         self.navigationItem.rightBarButtonItem = logOutButton;
     }
     return self;
-}
-
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    return [self init];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -70,7 +72,7 @@
     {
         NSArray* data = [SSVMyschoolChecker fetchAssignments];
         SSVDataStore* dataStore = [SSVDataStore sharedStore];
-        [dataStore populateData:data];
+        [dataStore populateAssignments:data];
     }
     [super viewWillAppear:animated];
 }
@@ -99,7 +101,7 @@
 -(void)reloadData{
     SSVDataStore* ds =[SSVDataStore sharedStore];
     [ds emptyDataStore];
-    [ds populateData:[SSVMyschoolChecker fetchAssignments]];
+    [ds populateAssignments:[SSVMyschoolChecker fetchAssignments]];
     [self.tableView reloadData];
     [[self refreshControl]endRefreshing];
 }

@@ -18,6 +18,7 @@
 		F5A845CB17EE235E003F9A83 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A845C717EE235E003F9A83 /* TFHppleElement.m */; };
 		F5A845CC17EE235E003F9A83 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A845C917EE235E003F9A83 /* XPathQuery.m */; };
 		F5A845CE17EE23D2003F9A83 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A845CD17EE23D2003F9A83 /* libxml2.dylib */; };
+		F5B580B617FC376500A00461 /* SSVGradesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B580B517FC376500A00461 /* SSVGradesTableViewController.m */; };
 		F5D4725A17ED10600043DDC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4725917ED10600043DDC9 /* Foundation.framework */; };
 		F5D4725C17ED10600043DDC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4725B17ED10600043DDC9 /* CoreGraphics.framework */; };
 		F5D4725E17ED10600043DDC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4725D17ED10600043DDC9 /* UIKit.framework */; };
@@ -40,6 +41,9 @@
 		F5E85DB517F0E63200893105 /* SSVDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E85DB317F0E63200893105 /* SSVDetailViewController.m */; };
 		F5E85DB617F0E63200893105 /* SSVDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E85DB417F0E63200893105 /* SSVDetailViewController.xib */; };
 		F5E85DB917F0F57100893105 /* SSVCustomURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E85DB817F0F57100893105 /* SSVCustomURLProtocol.m */; };
+		F5EABA4418060D5500DDBB98 /* Files@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5EABA4318060D5500DDBB98 /* Files@2x.png */; };
+		F5EABA4618060D8F00DDBB98 /* Favorites@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5EABA4518060D8F00DDBB98 /* Favorites@2x.png */; };
+		F5EABA491806145700DDBB98 /* SSVGrade.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EABA481806145700DDBB98 /* SSVGrade.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,8 @@
 		F5A845C817EE235E003F9A83 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		F5A845C917EE235E003F9A83 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		F5A845CD17EE23D2003F9A83 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		F5B580B417FC376500A00461 /* SSVGradesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVGradesTableViewController.h; sourceTree = "<group>"; };
+		F5B580B517FC376500A00461 /* SSVGradesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVGradesTableViewController.m; sourceTree = "<group>"; };
 		F5D4725617ED10600043DDC9 /* iSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D4725917ED10600043DDC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5D4725B17ED10600043DDC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -102,6 +108,10 @@
 		F5E85DB417F0E63200893105 /* SSVDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVDetailViewController.xib; sourceTree = "<group>"; };
 		F5E85DB717F0F57100893105 /* SSVCustomURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVCustomURLProtocol.h; sourceTree = "<group>"; };
 		F5E85DB817F0F57100893105 /* SSVCustomURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVCustomURLProtocol.m; sourceTree = "<group>"; };
+		F5EABA4318060D5500DDBB98 /* Files@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Files@2x.png"; sourceTree = "<group>"; };
+		F5EABA4518060D8F00DDBB98 /* Favorites@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Favorites@2x.png"; sourceTree = "<group>"; };
+		F5EABA471806145700DDBB98 /* SSVGrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVGrade.h; sourceTree = "<group>"; };
+		F5EABA481806145700DDBB98 /* SSVGrade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVGrade.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +189,8 @@
 				F5E2FA5C17EF8602007B5CBF /* Images */,
 				F5D4726817ED10600043DDC9 /* SSVAppDelegate.h */,
 				F5D4726917ED10600043DDC9 /* SSVAppDelegate.m */,
+				F5B580B417FC376500A00461 /* SSVGradesTableViewController.h */,
+				F5B580B517FC376500A00461 /* SSVGradesTableViewController.m */,
 				F5E85DB217F0E63200893105 /* SSVDetailViewController.h */,
 				F5E85DB317F0E63200893105 /* SSVDetailViewController.m */,
 				F5E85DB417F0E63200893105 /* SSVDetailViewController.xib */,
@@ -193,6 +205,8 @@
 				F5E2FA5A17EF818C007B5CBF /* SSVCell.xib */,
 				F591D03317EE1BF800803F54 /* SSVMyschoolChecker.h */,
 				F591D03417EE1BF800803F54 /* SSVMyschoolChecker.m */,
+				F5EABA471806145700DDBB98 /* SSVGrade.h */,
+				F5EABA481806145700DDBB98 /* SSVGrade.m */,
 				F5D4729217ED15790043DDC9 /* SSVDataStore.m */,
 				F5D4729117ED15790043DDC9 /* SSVDataStore.h */,
 				F5D4729417ED17630043DDC9 /* SSVAssignment.h */,
@@ -238,6 +252,8 @@
 		F5E2FA5C17EF8602007B5CBF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F5EABA4518060D8F00DDBB98 /* Favorites@2x.png */,
+				F5EABA4318060D5500DDBB98 /* Files@2x.png */,
 				983F497917F8B23C002A6583 /* centered_white.png */,
 				F5658B9717EFAB12005845E4 /* Gear.png */,
 				F5658B9117EFA703005845E4 /* check@2x.png */,
@@ -328,11 +344,13 @@
 				F5658B9817EFAB12005845E4 /* Gear.png in Resources */,
 				F59AEF8317F9826400D6AA28 /* Main.storyboard in Resources */,
 				F5E85DB617F0E63200893105 /* SSVDetailViewController.xib in Resources */,
+				F5EABA4618060D8F00DDBB98 /* Favorites@2x.png in Resources */,
 				F5E2FA5E17EF8616007B5CBF /* check.png in Resources */,
 				F5307D9F17F4D09100114E7A /* SSVLoginViewController.xib in Resources */,
 				F5D4727217ED10600043DDC9 /* Images.xcassets in Resources */,
 				F5E2FA5B17EF818C007B5CBF /* SSVCell.xib in Resources */,
 				F5658B9017EFA6B1005845E4 /* Cross@2x.png in Resources */,
+				F5EABA4418060D5500DDBB98 /* Files@2x.png in Resources */,
 				983F497A17F8B23C002A6583 /* centered_white.png in Resources */,
 				F5E2FA6017EF8E0C007B5CBF /* Cross.png in Resources */,
 				F5D4726417ED10600043DDC9 /* InfoPlist.strings in Resources */,
@@ -362,10 +380,12 @@
 				F5D4726617ED10600043DDC9 /* main.m in Sources */,
 				F5E2FA5917EF8166007B5CBF /* SSVCell.m in Sources */,
 				F5D4726A17ED10600043DDC9 /* SSVAppDelegate.m in Sources */,
+				F5B580B617FC376500A00461 /* SSVGradesTableViewController.m in Sources */,
 				F591D03517EE1BF800803F54 /* SSVMyschoolChecker.m in Sources */,
 				F5A845CB17EE235E003F9A83 /* TFHppleElement.m in Sources */,
 				F5E85DB917F0F57100893105 /* SSVCustomURLProtocol.m in Sources */,
 				F5D4729617ED17630043DDC9 /* SSVAssignment.m in Sources */,
+				F5EABA491806145700DDBB98 /* SSVGrade.m in Sources */,
 				F5A845CA17EE235E003F9A83 /* TFHpple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
