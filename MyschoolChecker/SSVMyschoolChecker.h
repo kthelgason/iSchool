@@ -11,6 +11,7 @@
 @interface SSVMyschoolChecker : NSObject
 
 + (NSArray*)fetchAssignments;
++ (NSArray*)fetchGrades;
 
 + (BOOL)checkAuthstring:(NSString*)authString;
 

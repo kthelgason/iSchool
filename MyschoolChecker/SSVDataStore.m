@@ -7,6 +7,7 @@
 //
 
 #import "SSVAssignment.h"
+#import "SSVGrade.h"
 #import "SSVDataStore.h"
 #import "TFHpple.h"
 
@@ -24,6 +25,7 @@
     self = [super init];
     if(self){
         allAssignments = [[NSMutableArray alloc] init];
+        allGrades = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -37,13 +39,17 @@
     return allAssignments;
 }
 
+- (NSArray*)allGrades{
+    return allGrades;
+}
+
 - (void)emptyDataStore{
     [allAssignments removeAllObjects];
 }
 
 // This method disgusts me, Parsing the HTML tree should not be done like this.
 // Needs refactoring
--(void)populateData:(NSArray*)data{
+-(void)populateAssignments:(NSArray*)data{
     
     for(int i = 0; i < [data count] - 1; i++){
         [allAssignments addObject:[[SSVAssignment alloc] init]];
@@ -86,6 +92,47 @@
     }
     if([allAssignments count] > 1){
         [allAssignments removeObjectAtIndex:0];
+    }
+}
+
+-(void)populateGrades:(NSArray*)data{
+    
+    for(int i = 0; i < [data count] - 1 ; i++){
+        [allGrades addObject:[[SSVGrade alloc] init]];
+        
+    }
+    int editing = 0;
+    for (TFHppleElement* element in data) {
+        if([element hasChildren]){
+            int counter = 0;
+            for(TFHppleElement* child in [element children]){
+                if([child text]){
+                    switch (counter) {
+                        case 0:
+                            [[allGrades objectAtIndex:editing] setGrade:[child text]];
+                            break;
+                        case 1:
+                            [[allGrades objectAtIndex:editing] setOrder:[child text]];
+                        case 2:
+                            [[allGrades objectAtIndex:editing] setFeedback:[child text]];
+                        default:
+                            break;
+                    }
+                    counter++;
+                }
+                if([child hasChildren]){
+                    for (TFHppleElement* grandchild in [child children]) {
+                        if ([grandchild text]) {
+                            [[allGrades objectAtIndex:editing] setAssignmentName:[grandchild text]];
+                        }
+                    }
+                }
+            }
+            editing++;
+        }
+    }
+    if([allGrades count] > 1){
+        [allGrades removeObjectAtIndex:0];
     }
 }
 @end
