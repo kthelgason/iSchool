@@ -13,6 +13,7 @@
 #import "SSVMyschoolChecker.h"
 #import "SSVLoginViewController.h"
 #import "SSVCell.h"
+#import "SSVCustomURLProtocol.h"
 
 @implementation SSVTableViewController
 
@@ -54,6 +55,9 @@
     UIRefreshControl* refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
     UINib* nib = [UINib nibWithNibName:@"SSVCell" bundle:nil];
+    
+    // Remove empty cells
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     // Register the nib that contains the cell
     [[self tableView] registerNib:nib forCellReuseIdentifier:@"SSVCell"];
@@ -110,7 +114,8 @@
 {
     [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    [self viewWillAppear:YES];
+    SSVLoginViewController* loginView = [[SSVLoginViewController alloc] init];
+    [self presentViewController:loginView animated:YES completion:nil];
 }
 
 // Code for table header. Trying to go without for now

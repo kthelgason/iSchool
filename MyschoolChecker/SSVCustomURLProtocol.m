@@ -37,7 +37,6 @@ static NSString *AUTHORIZED_REQUEST_HEADER = @"X-AUTHORIZED";
     NSString* basicAuthentication = [[NSUserDefaults standardUserDefaults] valueForKey:@"Authentication"];
     
     [customRequest setValue:basicAuthentication forHTTPHeaderField:@"Authorization"];
-    
     return customRequest;
 }
 

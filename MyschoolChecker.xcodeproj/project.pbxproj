@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9832A882180ECF2600C676C9 /* greencheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 9832A881180ECF2600C676C9 /* greencheck.png */; };
 		983F497A17F8B23C002A6583 /* centered_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 983F497917F8B23C002A6583 /* centered_white.png */; };
 		F5307D9E17F4D09100114E7A /* SSVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5307D9C17F4D09100114E7A /* SSVLoginViewController.m */; };
 		F5307D9F17F4D09100114E7A /* SSVLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */; };
-		F5658B9017EFA6B1005845E4 /* Cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5658B8F17EFA6B1005845E4 /* Cross@2x.png */; };
+		F5658B9017EFA6B1005845E4 /* Cross.png in Resources */ = {isa = PBXBuildFile; fileRef = F5658B8F17EFA6B1005845E4 /* Cross.png */; };
 		F5658B9817EFAB12005845E4 /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = F5658B9717EFAB12005845E4 /* Gear.png */; };
 		F591D03517EE1BF800803F54 /* SSVMyschoolChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F591D03417EE1BF800803F54 /* SSVMyschoolChecker.m */; };
 		F59AEF8317F9826400D6AA28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59AEF8217F9826400D6AA28 /* Main.storyboard */; };
@@ -36,8 +37,6 @@
 		F5D4729617ED17630043DDC9 /* SSVAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D4729517ED17630043DDC9 /* SSVAssignment.m */; };
 		F5E2FA5917EF8166007B5CBF /* SSVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2FA5817EF8165007B5CBF /* SSVCell.m */; };
 		F5E2FA5B17EF818C007B5CBF /* SSVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E2FA5A17EF818C007B5CBF /* SSVCell.xib */; };
-		F5E2FA5E17EF8616007B5CBF /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = F5E2FA5D17EF8616007B5CBF /* check.png */; };
-		F5E2FA6017EF8E0C007B5CBF /* Cross.png in Resources */ = {isa = PBXBuildFile; fileRef = F5E2FA5F17EF8E0C007B5CBF /* Cross.png */; };
 		F5E85DB517F0E63200893105 /* SSVDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E85DB317F0E63200893105 /* SSVDetailViewController.m */; };
 		F5E85DB617F0E63200893105 /* SSVDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E85DB417F0E63200893105 /* SSVDetailViewController.xib */; };
 		F5E85DB917F0F57100893105 /* SSVCustomURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E85DB817F0F57100893105 /* SSVCustomURLProtocol.m */; };
@@ -57,12 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9832A881180ECF2600C676C9 /* greencheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greencheck.png; sourceTree = "<group>"; };
 		983F497917F8B23C002A6583 /* centered_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centered_white.png; sourceTree = "<group>"; };
 		F5307D9B17F4D09100114E7A /* SSVLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVLoginViewController.h; sourceTree = "<group>"; };
 		F5307D9C17F4D09100114E7A /* SSVLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVLoginViewController.m; sourceTree = "<group>"; };
 		F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVLoginViewController.xib; sourceTree = "<group>"; };
-		F5658B8F17EFA6B1005845E4 /* Cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cross@2x.png"; sourceTree = "<group>"; };
-		F5658B9117EFA703005845E4 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		F5658B8F17EFA6B1005845E4 /* Cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cross.png; sourceTree = "<group>"; };
+		F5658B9117EFA703005845E4 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		F5658B9717EFAB12005845E4 /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
 		F591D03317EE1BF800803F54 /* SSVMyschoolChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVMyschoolChecker.h; sourceTree = "<group>"; };
 		F591D03417EE1BF800803F54 /* SSVMyschoolChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVMyschoolChecker.m; sourceTree = "<group>"; };
@@ -101,8 +101,6 @@
 		F5E2FA5717EF8165007B5CBF /* SSVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVCell.h; sourceTree = "<group>"; };
 		F5E2FA5817EF8165007B5CBF /* SSVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVCell.m; sourceTree = "<group>"; };
 		F5E2FA5A17EF818C007B5CBF /* SSVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVCell.xib; sourceTree = "<group>"; };
-		F5E2FA5D17EF8616007B5CBF /* check.png */ = {isa = PBXFileReference; explicitFileType = image.png; path = check.png; sourceTree = "<group>"; };
-		F5E2FA5F17EF8E0C007B5CBF /* Cross.png */ = {isa = PBXFileReference; explicitFileType = image.png; path = Cross.png; sourceTree = "<group>"; };
 		F5E85DB217F0E63200893105 /* SSVDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVDetailViewController.h; sourceTree = "<group>"; };
 		F5E85DB317F0E63200893105 /* SSVDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVDetailViewController.m; sourceTree = "<group>"; };
 		F5E85DB417F0E63200893105 /* SSVDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVDetailViewController.xib; sourceTree = "<group>"; };
@@ -256,10 +254,9 @@
 				F5EABA4318060D5500DDBB98 /* Files@2x.png */,
 				983F497917F8B23C002A6583 /* centered_white.png */,
 				F5658B9717EFAB12005845E4 /* Gear.png */,
-				F5658B9117EFA703005845E4 /* check@2x.png */,
-				F5658B8F17EFA6B1005845E4 /* Cross@2x.png */,
-				F5E2FA5F17EF8E0C007B5CBF /* Cross.png */,
-				F5E2FA5D17EF8616007B5CBF /* check.png */,
+				9832A881180ECF2600C676C9 /* greencheck.png */,
+				F5658B9117EFA703005845E4 /* check.png */,
+				F5658B8F17EFA6B1005845E4 /* Cross.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -342,17 +339,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5658B9817EFAB12005845E4 /* Gear.png in Resources */,
+				9832A882180ECF2600C676C9 /* greencheck.png in Resources */,
 				F59AEF8317F9826400D6AA28 /* Main.storyboard in Resources */,
 				F5E85DB617F0E63200893105 /* SSVDetailViewController.xib in Resources */,
 				F5EABA4618060D8F00DDBB98 /* Favorites@2x.png in Resources */,
-				F5E2FA5E17EF8616007B5CBF /* check.png in Resources */,
 				F5307D9F17F4D09100114E7A /* SSVLoginViewController.xib in Resources */,
 				F5D4727217ED10600043DDC9 /* Images.xcassets in Resources */,
 				F5E2FA5B17EF818C007B5CBF /* SSVCell.xib in Resources */,
-				F5658B9017EFA6B1005845E4 /* Cross@2x.png in Resources */,
+				F5658B9017EFA6B1005845E4 /* Cross.png in Resources */,
 				F5EABA4418060D5500DDBB98 /* Files@2x.png in Resources */,
 				983F497A17F8B23C002A6583 /* centered_white.png in Resources */,
-				F5E2FA6017EF8E0C007B5CBF /* Cross.png in Resources */,
 				F5D4726417ED10600043DDC9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
