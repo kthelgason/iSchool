@@ -43,12 +43,9 @@
     return allGrades;
 }
 
--(NSDictionary*)gradesDictionary{
-    return gradesDict;
-}
-
 - (void)emptyDataStore{
     [allAssignments removeAllObjects];
+    [allGrades removeAllObjects];
 }
 
 // This method disgusts me, Parsing the HTML tree should not be done like this.
@@ -98,6 +95,8 @@
         [allAssignments removeObjectAtIndex:0];
     }
 }
+
+// shiiiiiiiiiiiit.....
 
 -(void)populateGrades:(NSArray*)data{
     
@@ -149,19 +148,18 @@
     }];
     NSString* thisCourseName = [[grades objectAtIndex:0] inCourse];
     // Loop through all the grades
-    for(int i = 0; i < grades.count - 1; ++i){
+    for(int i = 0; i < grades.count; ++i){
         // Create an array for the current course
         NSMutableArray* thisCourse = [[NSMutableArray alloc] init];
         thisCourseName = [[grades objectAtIndex:i] inCourse];
         // While we are still in that course, push the grade
-        while([[[grades objectAtIndex:i] inCourse] isEqualToString:thisCourseName] && i < grades.count - 1)
+        while(i < grades.count && [[[grades objectAtIndex:i] inCourse] isEqualToString:thisCourseName])
         {
             if([[grades objectAtIndex:i] assignmentName] != nil){
                 [thisCourse addObject:[grades objectAtIndex:i]];
             }
             i++;
         }
-        
         //Push new array to the data store
         if(thisCourse.count > 0){
             [[[SSVDataStore sharedStore] allGrades] addObject: thisCourse];

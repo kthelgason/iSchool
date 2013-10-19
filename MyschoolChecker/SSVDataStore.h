@@ -14,7 +14,6 @@
 {
     NSMutableArray* allAssignments;
     NSMutableArray* allGrades;
-    NSDictionary* gradesDict;
 }
 
 + (SSVDataStore*)sharedStore;
