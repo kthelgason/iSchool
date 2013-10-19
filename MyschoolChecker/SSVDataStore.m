@@ -102,7 +102,6 @@
     
     NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:@"\\bT-[0-9]{3}-.*\\b" options:NSRegularExpressionCaseInsensitive error:nil];
     NSMutableArray* grades = [[NSMutableArray alloc] init];
-    int editing = 0;
     NSString* currentCourse = nil;
     for (TFHppleElement* element in data) {
         SSVGrade* thisGrade = [[SSVGrade alloc] init];
@@ -148,7 +147,7 @@
     }];
     NSString* thisCourseName = [[grades objectAtIndex:0] inCourse];
     // Loop through all the grades
-    for(int i = 0; i < grades.count; ++i){
+    for(int i = 0; i < grades.count;){
         // Create an array for the current course
         NSMutableArray* thisCourse = [[NSMutableArray alloc] init];
         thisCourseName = [[grades objectAtIndex:i] inCourse];
@@ -163,6 +162,10 @@
         //Push new array to the data store
         if(thisCourse.count > 0){
             [[[SSVDataStore sharedStore] allGrades] addObject: thisCourse];
+        }
+        // Super-secret increment
+        else{
+            ++i;
         }
     }
     
