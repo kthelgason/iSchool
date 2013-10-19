@@ -60,8 +60,7 @@
     self.refreshControl = refreshControl;
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    
+-(void)viewDidAppear:(BOOL)animated{
     if(![[NSUserDefaults standardUserDefaults] stringForKey:@"Authentication"])
     {
         SSVLoginViewController* loginView = [[SSVLoginViewController alloc] init];
@@ -70,11 +69,15 @@
     //otherwise load data as usual
     else
     {
-        NSArray* data = [SSVMyschoolChecker fetchAssignments];
         SSVDataStore* dataStore = [SSVDataStore sharedStore];
-        [dataStore populateAssignments:data];
+        if(dataStore.allAssignments.count == 0){
+            NSArray* data = [SSVMyschoolChecker fetchAssignments];
+            [dataStore emptyDataStore];
+            [dataStore populateAssignments:data];
+            [self.tableView reloadData];
+        }
     }
-    [super viewWillAppear:animated];
+    [super viewDidAppear:animated];
 }
 
 

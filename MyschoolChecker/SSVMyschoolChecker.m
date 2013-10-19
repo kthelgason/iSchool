@@ -52,13 +52,6 @@
         
         Nodes = [htmlParser searchWithXPathQuery:XpathQueryString];
     }
-    for (TFHppleElement* element in Nodes) {
-        if([element hasChildren]){
-            for(TFHppleElement* child in [element children]){
-                NSLog([child text]);
-            }
-        }
-    }
     
     return Nodes;
 }

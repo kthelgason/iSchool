@@ -131,8 +131,5 @@
             editing++;
         }
     }
-    if([allGrades count] > 1){
-        [allGrades removeObjectAtIndex:0];
-    }
 }
 @end

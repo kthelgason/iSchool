@@ -9,7 +9,7 @@
 #import "SSVGradesTableViewController.h"
 #import "SSVLoginViewController.h"
 #import "SSVDataStore.h"
-#import "SSVCell.h"
+#import "SSVGradeCell.h"
 #import "SSVGrade.h"
 #import "SSVMyschoolChecker.h"
 
@@ -20,7 +20,7 @@
 @implementation SSVGradesTableViewController
 
 - (id)init{
-    self = [super initWithStyle:UITableViewStylePlain];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         UINavigationItem* u = [self navigationItem];
         [u setTitle:@"Grades Achieved"];
@@ -41,14 +41,14 @@
     [super viewDidLoad];
     UIRefreshControl* refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
-    UINib* nib = [UINib nibWithNibName:@"SSVCell" bundle:nil];
+    UINib* nib = [UINib nibWithNibName:@"SSVGradeCell" bundle:nil];
     
     // Register the nib that contains the cell
-    [[self tableView] registerNib:nib forCellReuseIdentifier:@"SSVCell"];
+    [[self tableView] registerNib:nib forCellReuseIdentifier:@"SSVGradeCell"];
     self.refreshControl = refreshControl;
 }
 
--(void)viewWillAppear:(BOOL)animated{
+-(void)viewDidAppear:(BOOL)animated{
     
     if(![[NSUserDefaults standardUserDefaults] stringForKey:@"Authentication"])
     {
@@ -58,17 +58,29 @@
     //otherwise load data as usual
     else
     {
-        NSArray* data = [SSVMyschoolChecker fetchGrades];
         SSVDataStore* dataStore = [SSVDataStore sharedStore];
-        [dataStore populateGrades:data];
+        if(dataStore.allGrades.count == 0){
+            NSArray* data = [SSVMyschoolChecker fetchGrades];
+            [dataStore emptyDataStore];
+            [dataStore populateGrades:data];
+            [self.tableView reloadData];
+        }
     }
-    [super viewWillAppear:animated];
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)reloadData{
+    SSVDataStore* ds =[SSVDataStore sharedStore];
+    [ds emptyDataStore];
+    [ds populateGrades:[SSVMyschoolChecker fetchGrades]];
+    [self.tableView reloadData];
+    [[self refreshControl]endRefreshing];
 }
 
 #pragma mark - Table view data source
@@ -80,12 +92,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SSVCell* cell = [tableView dequeueReusableCellWithIdentifier:@"SSVCell"];
+    SSVGradeCell* cell = [tableView dequeueReusableCellWithIdentifier:@"SSVGradeCell"];
     
     SSVGrade* grade = [[[SSVDataStore sharedStore] allGrades] objectAtIndex:[indexPath row]];
-    [[cell titleLabel] setText:[grade assignmentName]];
-    [[cell courseNameLabel] setText:[grade order]];
-    [[cell dueDateLabel] setText:[grade grade]];
+    [[cell assignmentNameLabel] setText:[grade assignmentName]];
+    [[cell orderLabel] setText:[grade order]];
+    [[cell gradeLabel] setText:[grade grade]];
     
     return cell;
 }

@@ -44,6 +44,9 @@
 		F5EABA4418060D5500DDBB98 /* Files@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5EABA4318060D5500DDBB98 /* Files@2x.png */; };
 		F5EABA4618060D8F00DDBB98 /* Favorites@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5EABA4518060D8F00DDBB98 /* Favorites@2x.png */; };
 		F5EABA491806145700DDBB98 /* SSVGrade.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EABA481806145700DDBB98 /* SSVGrade.m */; };
+		F5EABA511808293E00DDBB98 /* SSVGradeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EABA501808293E00DDBB98 /* SSVGradeCell.m */; };
+		F5EABA531808295200DDBB98 /* SSVGradeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5EABA521808295200DDBB98 /* SSVGradeCell.xib */; };
+		F5EABA581808323D00DDBB98 /* SSVCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EABA571808323D00DDBB98 /* SSVCourse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,11 @@
 		F5EABA4518060D8F00DDBB98 /* Favorites@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Favorites@2x.png"; sourceTree = "<group>"; };
 		F5EABA471806145700DDBB98 /* SSVGrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVGrade.h; sourceTree = "<group>"; };
 		F5EABA481806145700DDBB98 /* SSVGrade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVGrade.m; sourceTree = "<group>"; };
+		F5EABA4F1808293E00DDBB98 /* SSVGradeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVGradeCell.h; sourceTree = "<group>"; };
+		F5EABA501808293E00DDBB98 /* SSVGradeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVGradeCell.m; sourceTree = "<group>"; };
+		F5EABA521808295200DDBB98 /* SSVGradeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVGradeCell.xib; sourceTree = "<group>"; };
+		F5EABA561808323D00DDBB98 /* SSVCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVCourse.h; sourceTree = "<group>"; };
+		F5EABA571808323D00DDBB98 /* SSVCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVCourse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,17 +208,12 @@
 				F5E85DB717F0F57100893105 /* SSVCustomURLProtocol.h */,
 				F5E85DB817F0F57100893105 /* SSVCustomURLProtocol.m */,
 				F59AEF8217F9826400D6AA28 /* Main.storyboard */,
-				F5E2FA5717EF8165007B5CBF /* SSVCell.h */,
-				F5E2FA5817EF8165007B5CBF /* SSVCell.m */,
-				F5E2FA5A17EF818C007B5CBF /* SSVCell.xib */,
+				F5EABA541808306900DDBB98 /* Cells */,
 				F591D03317EE1BF800803F54 /* SSVMyschoolChecker.h */,
 				F591D03417EE1BF800803F54 /* SSVMyschoolChecker.m */,
-				F5EABA471806145700DDBB98 /* SSVGrade.h */,
-				F5EABA481806145700DDBB98 /* SSVGrade.m */,
+				F5EABA551808308800DDBB98 /* Models */,
 				F5D4729217ED15790043DDC9 /* SSVDataStore.m */,
 				F5D4729117ED15790043DDC9 /* SSVDataStore.h */,
-				F5D4729417ED17630043DDC9 /* SSVAssignment.h */,
-				F5D4729517ED17630043DDC9 /* SSVAssignment.m */,
 				F5D4728E17ED12030043DDC9 /* SSVTableViewController.h */,
 				F5D4728F17ED12030043DDC9 /* SSVTableViewController.m */,
 				F5A845C317EE2352003F9A83 /* hpple */,
@@ -262,6 +265,32 @@
 				F5E2FA5D17EF8616007B5CBF /* check.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		F5EABA541808306900DDBB98 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F5E2FA5717EF8165007B5CBF /* SSVCell.h */,
+				F5E2FA5817EF8165007B5CBF /* SSVCell.m */,
+				F5EABA4F1808293E00DDBB98 /* SSVGradeCell.h */,
+				F5EABA501808293E00DDBB98 /* SSVGradeCell.m */,
+				F5EABA521808295200DDBB98 /* SSVGradeCell.xib */,
+				F5E2FA5A17EF818C007B5CBF /* SSVCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		F5EABA551808308800DDBB98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5D4729417ED17630043DDC9 /* SSVAssignment.h */,
+				F5D4729517ED17630043DDC9 /* SSVAssignment.m */,
+				F5EABA471806145700DDBB98 /* SSVGrade.h */,
+				F5EABA481806145700DDBB98 /* SSVGrade.m */,
+				F5EABA561808323D00DDBB98 /* SSVCourse.h */,
+				F5EABA571808323D00DDBB98 /* SSVCourse.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5EABA531808295200DDBB98 /* SSVGradeCell.xib in Resources */,
 				F5658B9817EFAB12005845E4 /* Gear.png in Resources */,
 				F59AEF8317F9826400D6AA28 /* Main.storyboard in Resources */,
 				F5E85DB617F0E63200893105 /* SSVDetailViewController.xib in Resources */,
@@ -380,12 +410,14 @@
 				F5D4726617ED10600043DDC9 /* main.m in Sources */,
 				F5E2FA5917EF8166007B5CBF /* SSVCell.m in Sources */,
 				F5D4726A17ED10600043DDC9 /* SSVAppDelegate.m in Sources */,
+				F5EABA511808293E00DDBB98 /* SSVGradeCell.m in Sources */,
 				F5B580B617FC376500A00461 /* SSVGradesTableViewController.m in Sources */,
 				F591D03517EE1BF800803F54 /* SSVMyschoolChecker.m in Sources */,
 				F5A845CB17EE235E003F9A83 /* TFHppleElement.m in Sources */,
 				F5E85DB917F0F57100893105 /* SSVCustomURLProtocol.m in Sources */,
 				F5D4729617ED17630043DDC9 /* SSVAssignment.m in Sources */,
 				F5EABA491806145700DDBB98 /* SSVGrade.m in Sources */,
+				F5EABA581808323D00DDBB98 /* SSVCourse.m in Sources */,
 				F5A845CA17EE235E003F9A83 /* TFHpple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
