@@ -17,7 +17,8 @@
 }
 
 + (SSVDataStore*)sharedStore;
-- (void)emptyDataStore;
+- (void)emptyDataStoreGrades;
+- (void)emptyDataStoreAssignments;
 - (void)populateAssignments:(NSArray*)data;
 - (void)populateGrades:(NSArray*)data;
 

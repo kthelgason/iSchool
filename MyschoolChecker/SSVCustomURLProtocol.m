@@ -47,6 +47,8 @@ static NSString *AUTHORIZED_REQUEST_HEADER = @"X-AUTHORIZED";
     
     [_customRequest setValue:basicAuthentication forHTTPHeaderField:@"Authorization"];
     _connection = [NSURLConnection connectionWithRequest:_customRequest delegate:self];
+    // Fixes stupid log message
+    [self.client URLProtocol:self didReceiveResponse:[[NSURLResponse alloc] init] cacheStoragePolicy:NSURLCacheStorageNotAllowed];
 }
 
 - (void) stopLoading

@@ -43,9 +43,13 @@
     return allGrades;
 }
 
-- (void)emptyDataStore{
-    [allAssignments removeAllObjects];
+- (void)emptyDataStoreGrades{
     [allGrades removeAllObjects];
+}
+
+
+- (void)emptyDataStoreAssignments{
+    [allAssignments removeAllObjects];
 }
 
 // This method disgusts me, Parsing the HTML tree should not be done like this.
@@ -112,8 +116,6 @@
                     NSTextCheckingResult *match = [regex firstMatchInString:[child text] options:0 range:NSMakeRange(0, [[child text] length])];
                     if(match){
                         currentCourse = [child text];
-                        NSLog(@"Match!");
-                        NSLog(@"child text: %@", [child text]);
                         continue;
                     }
                     switch (counter) {

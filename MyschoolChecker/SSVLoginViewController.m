@@ -56,7 +56,7 @@ int BOTTOM_CONSTRAINT = 214;
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
-    [self addGradient:self.logInButton];
+//    [self addGradient:self.logInButton];
     [self observeKeyboard];
 
 }

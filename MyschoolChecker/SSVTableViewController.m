@@ -72,7 +72,7 @@
         SSVDataStore* dataStore = [SSVDataStore sharedStore];
         if(dataStore.allAssignments.count == 0){
             NSArray* data = [SSVMyschoolChecker fetchAssignments];
-            [dataStore emptyDataStore];
+            [dataStore emptyDataStoreAssignments];
             [dataStore populateAssignments:data];
             [self.tableView reloadData];
         }
@@ -103,7 +103,7 @@
 
 -(void)reloadData{
     SSVDataStore* ds =[SSVDataStore sharedStore];
-    [ds emptyDataStore];
+    [ds emptyDataStoreAssignments];
     [ds populateAssignments:[SSVMyschoolChecker fetchAssignments]];
     [self.tableView reloadData];
     [[self refreshControl]endRefreshing];
@@ -113,7 +113,7 @@
 {
     [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    [self viewWillAppear:YES];
+    [self viewDidAppear:YES];
 }
 
 // Code for table header. Trying to go without for now

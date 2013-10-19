@@ -12,6 +12,7 @@
 @implementation SSVMyschoolChecker
 
 + (NSArray*)fetchAssignments{
+    NSLog(@"Fetching assignment data from myschool...");
     NSURL* myschoolConnection = [NSURL URLWithString:@"https://myschool.ru.is/myschool/?Page=Exe&ID=1.12"];
     
     NSString* basicAuthentication = [[NSUserDefaults standardUserDefaults] objectForKey:@"Authentication"];
@@ -38,6 +39,7 @@
 }
 
 + (NSArray*)fetchGrades{
+    NSLog(@"Fetching grade data from myschool...");
     NSURL* myschoolConnection = [NSURL URLWithString:@"https://myschool.ru.is/myschool/?Page=Exe&ID=1.12"];
     
     NSString* basicAuthentication = [[NSUserDefaults standardUserDefaults] objectForKey:@"Authentication"];

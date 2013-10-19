@@ -61,7 +61,7 @@
         SSVDataStore* dataStore = [SSVDataStore sharedStore];
         if(dataStore.allGrades.count == 0){
             NSArray* data = [SSVMyschoolChecker fetchGrades];
-            [dataStore emptyDataStore];
+            [dataStore emptyDataStoreGrades];
             [dataStore populateGrades:data];
             [self.tableView reloadData];
         }
@@ -77,7 +77,7 @@
 
 -(void)reloadData{
     SSVDataStore* ds =[SSVDataStore sharedStore];
-    [ds emptyDataStore];
+    [ds emptyDataStoreGrades];
     [ds populateGrades:[SSVMyschoolChecker fetchGrades]];
     [self.tableView reloadData];
     [[self refreshControl]endRefreshing];
