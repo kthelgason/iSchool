@@ -43,6 +43,10 @@
     return allGrades;
 }
 
+-(NSDictionary*)gradesDictionary{
+    return gradesDict;
+}
+
 - (void)emptyDataStore{
     [allAssignments removeAllObjects];
 }
@@ -98,45 +102,71 @@
 -(void)populateGrades:(NSArray*)data{
     
     NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:@"\\bT-[0-9]{3}-.*\\b" options:NSRegularExpressionCaseInsensitive error:nil];
-    
-    for(int i = 0; i < [data count] - 1 ; i++){
-        [allGrades addObject:[[SSVGrade alloc] init]];
-        
-    }
+    NSMutableArray* grades = [[NSMutableArray alloc] init];
     int editing = 0;
+    NSString* currentCourse = nil;
     for (TFHppleElement* element in data) {
+        SSVGrade* thisGrade = [[SSVGrade alloc] init];
         if([element hasChildren]){
             int counter = 0;
             for(TFHppleElement* child in [element children]){
                 if([child text]){
                     NSTextCheckingResult *match = [regex firstMatchInString:[child text] options:0 range:NSMakeRange(0, [[child text] length])];
                     if(match){
+                        currentCourse = [child text];
                         NSLog(@"Match!");
                         NSLog(@"child text: %@", [child text]);
+                        continue;
                     }
                     switch (counter) {
                         case 0:
-                            [[allGrades objectAtIndex:editing] setGrade:[child text]];
+                            [thisGrade setGrade:[child text]];
                             break;
                         case 1:
-                            [[allGrades objectAtIndex:editing] setOrder:[child text]];
+                            [thisGrade setOrder:[child text]];
                         case 2:
-                            [[allGrades objectAtIndex:editing] setFeedback:[child text]];
+                            [thisGrade setFeedback:[child text]];
                         default:
                             break;
                     }
+                    [thisGrade setInCourse:currentCourse];
                     counter++;
                 }
                 if([child hasChildren]){
                     for (TFHppleElement* grandchild in [child children]) {
                         if ([grandchild text]) {
-                            [[allGrades objectAtIndex:editing] setAssignmentName:[grandchild text]];
+                            [thisGrade setAssignmentName:[grandchild text]];
                         }
                     }
                 }
             }
-            editing++;
+            [grades addObject:thisGrade];
         }
     }
+    // This is awesome! Didn't know Obj-C had this block syntax
+    [grades sortUsingComparator:^(SSVGrade* obj1, SSVGrade* obj2){
+        return (NSComparisonResult)[obj1.inCourse compare:obj2.inCourse];
+    }];
+    NSString* thisCourseName = [[grades objectAtIndex:0] inCourse];
+    // Loop through all the grades
+    for(int i = 0; i < grades.count - 1; ++i){
+        // Create an array for the current course
+        NSMutableArray* thisCourse = [[NSMutableArray alloc] init];
+        thisCourseName = [[grades objectAtIndex:i] inCourse];
+        // While we are still in that course, push the grade
+        while([[[grades objectAtIndex:i] inCourse] isEqualToString:thisCourseName] && i < grades.count - 1)
+        {
+            if([[grades objectAtIndex:i] assignmentName] != nil){
+                [thisCourse addObject:[grades objectAtIndex:i]];
+            }
+            i++;
+        }
+        
+        //Push new array to the data store
+        if(thisCourse.count > 0){
+            [[[SSVDataStore sharedStore] allGrades] addObject: thisCourse];
+        }
+    }
+    
 }
 @end

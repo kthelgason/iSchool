@@ -14,6 +14,7 @@
 {
     NSMutableArray* allAssignments;
     NSMutableArray* allGrades;
+    NSDictionary* gradesDict;
 }
 
 + (SSVDataStore*)sharedStore;
@@ -23,6 +24,6 @@
 
 // Accessors/mutators
 - (NSArray*)allAssignments;
-- (NSArray*)allGrades;
+- (NSMutableArray*)allGrades;
 
 @end

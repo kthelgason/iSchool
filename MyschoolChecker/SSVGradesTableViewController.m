@@ -87,19 +87,33 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[SSVDataStore sharedStore] allGrades] count];
+    return [[[[SSVDataStore sharedStore] allGrades] objectAtIndex:section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SSVGradeCell* cell = [tableView dequeueReusableCellWithIdentifier:@"SSVGradeCell"];
     
-    SSVGrade* grade = [[[SSVDataStore sharedStore] allGrades] objectAtIndex:[indexPath row]];
+    NSArray* gradesInCourse = [[[SSVDataStore sharedStore] allGrades] objectAtIndex:[indexPath section]];
+    SSVGrade* grade = [gradesInCourse objectAtIndex:[indexPath row]];
     [[cell assignmentNameLabel] setText:[grade assignmentName]];
     [[cell orderLabel] setText:[grade order]];
     [[cell gradeLabel] setText:[grade grade]];
     
     return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [[[SSVDataStore sharedStore] allGrades] count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    NSArray* array = [[[SSVDataStore sharedStore] allGrades] objectAtIndex:section];
+    if(array.count > 0){
+        return [[array objectAtIndex:0] inCourse];
+    }
+    return @"??";
 }
 
 

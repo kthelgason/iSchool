@@ -14,5 +14,6 @@
 @property(nonatomic, copy)NSString* grade;
 @property(nonatomic, copy)NSString* order;
 @property(nonatomic, copy)NSString* feedback;
+@property(nonatomic, copy)NSString* inCourse;
 
 @end

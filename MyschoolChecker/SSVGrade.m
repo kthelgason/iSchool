@@ -10,6 +10,6 @@
 
 @implementation SSVGrade
 
-@synthesize assignmentName, grade, order, feedback;
+@synthesize assignmentName, grade, order, feedback, inCourse;
 
 @end
