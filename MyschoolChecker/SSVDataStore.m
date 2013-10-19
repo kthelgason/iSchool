@@ -97,6 +97,8 @@
 
 -(void)populateGrades:(NSArray*)data{
     
+    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:@"\\bT-[0-9]{3}-.*\\b" options:NSRegularExpressionCaseInsensitive error:nil];
+    
     for(int i = 0; i < [data count] - 1 ; i++){
         [allGrades addObject:[[SSVGrade alloc] init]];
         
@@ -107,6 +109,11 @@
             int counter = 0;
             for(TFHppleElement* child in [element children]){
                 if([child text]){
+                    NSTextCheckingResult *match = [regex firstMatchInString:[child text] options:0 range:NSMakeRange(0, [[child text] length])];
+                    if(match){
+                        NSLog(@"Match!");
+                        NSLog(@"child text: %@", [child text]);
+                    }
                     switch (counter) {
                         case 0:
                             [[allGrades objectAtIndex:editing] setGrade:[child text]];
