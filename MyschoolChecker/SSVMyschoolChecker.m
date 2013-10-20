@@ -13,9 +13,11 @@
 
 + (NSArray*)fetchAssignments{
     NSLog(@"Fetching assignment data from myschool...");
+
     NSURL* myschoolConnection = [NSURL URLWithString:@"https://myschool.ru.is/myschool/?Page=Exe&ID=1.12"];
     
     NSString* basicAuthentication = [[NSUserDefaults standardUserDefaults] objectForKey:@"Authentication"];
+    
     NSMutableURLRequest* urlRequest = [[NSMutableURLRequest alloc] initWithURL:myschoolConnection];
     [urlRequest setValue:basicAuthentication forHTTPHeaderField:@"Authorization"];
     NSData* requestData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];

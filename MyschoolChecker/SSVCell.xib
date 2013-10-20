@@ -48,6 +48,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Cross.png" width="280" height="280"/>
+        <image name="Cross.png" width="40" height="40"/>
     </resources>
 </document>

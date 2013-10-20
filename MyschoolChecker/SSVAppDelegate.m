@@ -31,6 +31,7 @@
     SSVTableViewController* tvc = [[SSVTableViewController alloc ] initWithStyle:UITableViewStylePlain];
     SSVGradesTableViewController* gtvc = [[SSVGradesTableViewController alloc]init];
     
+    
     // Create UINavigationController
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:tvc];
     UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:gtvc];
