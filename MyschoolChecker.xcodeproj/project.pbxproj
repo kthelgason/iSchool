@@ -79,7 +79,7 @@
 		F5A845CD17EE23D2003F9A83 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		F5B580B417FC376500A00461 /* SSVGradesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVGradesTableViewController.h; sourceTree = "<group>"; };
 		F5B580B517FC376500A00461 /* SSVGradesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVGradesTableViewController.m; sourceTree = "<group>"; };
-		F5D4725617ED10600043DDC9 /* iSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D4725617ED10600043DDC9 /* MyRU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D4725917ED10600043DDC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5D4725B17ED10600043DDC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F5D4725D17ED10600043DDC9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -173,7 +173,7 @@
 		F5D4725717ED10600043DDC9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5D4725617ED10600043DDC9 /* iSchool.app */,
+				F5D4725617ED10600043DDC9 /* MyRU.app */,
 				F5D4727717ED10600043DDC9 /* MyschoolCheckerTests.xctest */,
 			);
 			name = Products;
@@ -310,7 +310,7 @@
 			);
 			name = MyschoolChecker;
 			productName = MyschoolChecker;
-			productReference = F5D4725617ED10600043DDC9 /* iSchool.app */;
+			productReference = F5D4725617ED10600043DDC9 /* MyRU.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F5D4727617ED10600043DDC9 /* MyschoolCheckerTests */ = {
@@ -533,12 +533,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyschoolChecker/MyschoolChecker-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "MyschoolChecker/MyschoolChecker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = iSchool;
+				PRODUCT_NAME = MyRU;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -548,12 +549,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyschoolChecker/MyschoolChecker-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = "MyschoolChecker/MyschoolChecker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = iSchool;
+				PRODUCT_NAME = MyRU;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
