@@ -21,7 +21,8 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
-    [super setSelected:selected animated:animated];
+    // Don't highlight selected cells
+    // [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
 }

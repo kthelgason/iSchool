@@ -45,7 +45,6 @@
 		F5EABA491806145700DDBB98 /* SSVGrade.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EABA481806145700DDBB98 /* SSVGrade.m */; };
 		F5EABA511808293E00DDBB98 /* SSVGradeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EABA501808293E00DDBB98 /* SSVGradeCell.m */; };
 		F5EABA531808295200DDBB98 /* SSVGradeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5EABA521808295200DDBB98 /* SSVGradeCell.xib */; };
-		F5EABA581808323D00DDBB98 /* SSVCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EABA571808323D00DDBB98 /* SSVCourse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,8 +115,6 @@
 		F5EABA4F1808293E00DDBB98 /* SSVGradeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVGradeCell.h; sourceTree = "<group>"; };
 		F5EABA501808293E00DDBB98 /* SSVGradeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVGradeCell.m; sourceTree = "<group>"; };
 		F5EABA521808295200DDBB98 /* SSVGradeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVGradeCell.xib; sourceTree = "<group>"; };
-		F5EABA561808323D00DDBB98 /* SSVCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVCourse.h; sourceTree = "<group>"; };
-		F5EABA571808323D00DDBB98 /* SSVCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVCourse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,8 +281,6 @@
 				F5D4729517ED17630043DDC9 /* SSVAssignment.m */,
 				F5EABA471806145700DDBB98 /* SSVGrade.h */,
 				F5EABA481806145700DDBB98 /* SSVGrade.m */,
-				F5EABA561808323D00DDBB98 /* SSVCourse.h */,
-				F5EABA571808323D00DDBB98 /* SSVCourse.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -413,7 +408,6 @@
 				F5E85DB917F0F57100893105 /* SSVCustomURLProtocol.m in Sources */,
 				F5D4729617ED17630043DDC9 /* SSVAssignment.m in Sources */,
 				F5EABA491806145700DDBB98 /* SSVGrade.m in Sources */,
-				F5EABA581808323D00DDBB98 /* SSVCourse.m in Sources */,
 				F5A845CA17EE235E003F9A83 /* TFHpple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
