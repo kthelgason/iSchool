@@ -14,6 +14,7 @@
 #import "SSVLoginViewController.h"
 #import "SSVCell.h"
 #import "SSVCustomURLProtocol.h"
+#import "SSVRestartViewController.h"
 
 dispatch_queue_t backgroundQueue;
 
@@ -128,8 +129,8 @@ dispatch_queue_t backgroundQueue;
 {
     [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    SSVLoginViewController* loginView = [[SSVLoginViewController alloc] init];
-    [self presentViewController:loginView animated:YES completion:nil];
+    SSVRestartViewController* restartScreen = [[SSVRestartViewController alloc] init];
+    [self presentViewController:restartScreen animated:YES completion:nil];
 }
 
 // This method dispatches calls to populate the datastores asynchronously as soon as the app starts
