@@ -12,6 +12,7 @@
 #import "SSVGradeCell.h"
 #import "SSVGrade.h"
 #import "SSVMyschoolChecker.h"
+#import "SSVRestartViewController.h"
 
 @interface SSVGradesTableViewController ()
 
@@ -27,6 +28,9 @@
         UITabBarItem* tabItem = [self tabBarItem];
         [tabItem setTitle:@"Grades"];
         [tabItem setImage:[UIImage imageNamed:@"Favorites.png"]];
+        
+        UIBarButtonItem *logOutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStyleBordered target:self action:@selector(logOut)];
+        self.navigationItem.rightBarButtonItem = logOutButton;
     }
     return self;
 }
@@ -116,5 +120,12 @@
     return @"??";
 }
 
+-(void)logOut
+{
+    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    SSVRestartViewController* restartScreen = [[SSVRestartViewController alloc] init];
+    [self presentViewController:restartScreen animated:YES completion:nil];
+}
 
 @end

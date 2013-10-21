@@ -56,7 +56,7 @@ int BOTTOM_CONSTRAINT = 214;
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
-//    [self addGradient:self.logInButton];
+    [self addGradient:self.logInButton];
     [self observeKeyboard];
 
 }
@@ -114,7 +114,7 @@ int BOTTOM_CONSTRAINT = 214;
     layer.borderColor = [UIColor colorWithWhite:0.5f alpha:0.2f].CGColor;
     
     // Add Shine
-    CAGradientLayer *shineLayer = [CAGradientLayer layer];
+    /*CAGradientLayer *shineLayer = [CAGradientLayer layer];
     shineLayer.frame = layer.bounds;
     shineLayer.colors = [NSArray arrayWithObjects:
                          (id)[UIColor colorWithWhite:1.0f alpha:0.4f].CGColor,
@@ -130,7 +130,7 @@ int BOTTOM_CONSTRAINT = 214;
                             [NSNumber numberWithFloat:0.8f],
                             [NSNumber numberWithFloat:1.0f],
                             nil];
-    [layer addSublayer:shineLayer];
+    [layer addSublayer:shineLayer];*/
 }
 
 
