@@ -15,6 +15,8 @@
 #import "SSVCell.h"
 #import "SSVCustomURLProtocol.h"
 
+dispatch_queue_t backgroundQueue;
+
 @implementation SSVTableViewController
 
 - (id)init{
@@ -35,6 +37,14 @@
         self.navigationItem.rightBarButtonItem = logOutButton;
     }
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    if([[NSUserDefaults standardUserDefaults] stringForKey:@"Authentication"] && [[[SSVDataStore sharedStore] allAssignments] count] == 0){
+        backgroundQueue = dispatch_queue_create("is.sigsegv.ischool.bg", NULL);
+        [self process];
+    }
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -76,6 +86,7 @@
         SSVDataStore* dataStore = [SSVDataStore sharedStore];
         if(dataStore.allAssignments.count == 0){
             NSArray* data = [SSVMyschoolChecker fetchAssignments];
+            NSLog(@"data was nil");
             [dataStore emptyDataStoreAssignments];
             [dataStore populateAssignments:data];
             [self.tableView reloadData];
@@ -94,7 +105,7 @@
     [[cell courseNameLabel] setText:[assignment courseName]];
     [[cell dueDateLabel] setText:[assignment dueDate]];
     if([assignment.handedIn  isEqual: @"Óskilað"]){
-        [[cell completedImage] setImage:[assignment notDoneImage]];
+        [[cell completedImage] setImage:nil];
     } else {
         [[cell completedImage] setImage:[assignment doneImage]];
     }
@@ -119,6 +130,15 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     SSVLoginViewController* loginView = [[SSVLoginViewController alloc] init];
     [self presentViewController:loginView animated:YES completion:nil];
+}
+
+// This method dispatches calls to populate the datastores asynchronously as soon as the app starts
+- (void)process {
+    dispatch_async(backgroundQueue, ^(void) {
+        SSVDataStore* store = [SSVDataStore sharedStore];
+        [store emptyDataStoreGrades];
+        [store populateGrades:[SSVMyschoolChecker fetchGrades]];
+    });
 }
 
 // Code for table header. Trying to go without for now

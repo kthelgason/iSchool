@@ -14,10 +14,12 @@
 @implementation SSVDataStore
 
 + (SSVDataStore*)sharedStore{
+    // Predicate and dispatch function take care of nescessary locking and synchro
+    static dispatch_once_t pred;
     static SSVDataStore* sharedStore = nil;
-    if(!sharedStore){
+    dispatch_once(&pred, ^{
         sharedStore = [[super allocWithZone:nil] init];
-    }
+    });
     return sharedStore;
 }
 
@@ -51,6 +53,8 @@
 - (void)emptyDataStoreAssignments{
     [allAssignments removeAllObjects];
 }
+
+
 
 // This method disgusts me, Parsing the HTML tree should not be done like this.
 // Needs refactoring
@@ -171,5 +175,13 @@
         }
     }
     
+}
+
+#pragma mark - Operation Queue methods
+
+- (NSOperation*)taskWithData:(id)data {
+    NSInvocationOperation* theOp = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(populateAssignments:) object:data];
+    
+    return theOp;
 }
 @end

@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>F693A14B-E3C8-4EC4-9247-4BD15D29341A</string>
+	<string>66DB8FB7-1922-4F3F-803C-114B0AE95EED</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MyschoolChecker</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6669BC6F-8691-40AB-A3A7-0F1C2F721EF8</key>
-		<string>https://github.com/bjornorri/iSchool.git</string>
+		<key>5E15FF7B-8451-431F-AA59-53E0620298A1</key>
+		<string>ssh://github.com/kthelgason/iSchool.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MyschoolChecker.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6669BC6F-8691-40AB-A3A7-0F1C2F721EF8</key>
+		<key>5E15FF7B-8451-431F-AA59-53E0620298A1</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/bjornorri/iSchool.git</string>
+	<string>ssh://github.com/kthelgason/iSchool.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6669BC6F-8691-40AB-A3A7-0F1C2F721EF8</string>
+	<string>5E15FF7B-8451-431F-AA59-53E0620298A1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6669BC6F-8691-40AB-A3A7-0F1C2F721EF8</string>
+			<string>5E15FF7B-8451-431F-AA59-53E0620298A1</string>
 			<key>IDESourceControlWCCName</key>
-			<string>iSchool</string>
+			<string>MyschoolChecker</string>
 		</dict>
 	</array>
 </dict>

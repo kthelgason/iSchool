@@ -11,7 +11,6 @@
 		983F497A17F8B23C002A6583 /* centered_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 983F497917F8B23C002A6583 /* centered_white.png */; };
 		F5307D9E17F4D09100114E7A /* SSVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5307D9C17F4D09100114E7A /* SSVLoginViewController.m */; };
 		F5307D9F17F4D09100114E7A /* SSVLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */; };
-		F5658B9017EFA6B1005845E4 /* Cross.png in Resources */ = {isa = PBXBuildFile; fileRef = F5658B8F17EFA6B1005845E4 /* Cross.png */; };
 		F5658B9817EFAB12005845E4 /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = F5658B9717EFAB12005845E4 /* Gear.png */; };
 		F591D03517EE1BF800803F54 /* SSVMyschoolChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F591D03417EE1BF800803F54 /* SSVMyschoolChecker.m */; };
 		F59AEF8317F9826400D6AA28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59AEF8217F9826400D6AA28 /* Main.storyboard */; };
@@ -20,6 +19,7 @@
 		F5A845CC17EE235E003F9A83 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A845C917EE235E003F9A83 /* XPathQuery.m */; };
 		F5A845CE17EE23D2003F9A83 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A845CD17EE23D2003F9A83 /* libxml2.dylib */; };
 		F5B580B617FC376500A00461 /* SSVGradesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B580B517FC376500A00461 /* SSVGradesTableViewController.m */; };
+		F5CD6FEF18144A4700F2781B /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CD6FEE18144A4700F2781B /* cross.png */; };
 		F5D4725A17ED10600043DDC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4725917ED10600043DDC9 /* Foundation.framework */; };
 		F5D4725C17ED10600043DDC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4725B17ED10600043DDC9 /* CoreGraphics.framework */; };
 		F5D4725E17ED10600043DDC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D4725D17ED10600043DDC9 /* UIKit.framework */; };
@@ -64,7 +64,6 @@
 		F5307D9B17F4D09100114E7A /* SSVLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVLoginViewController.h; sourceTree = "<group>"; };
 		F5307D9C17F4D09100114E7A /* SSVLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVLoginViewController.m; sourceTree = "<group>"; };
 		F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVLoginViewController.xib; sourceTree = "<group>"; };
-		F5658B8F17EFA6B1005845E4 /* Cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cross.png; sourceTree = "<group>"; };
 		F5658B9117EFA703005845E4 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		F5658B9717EFAB12005845E4 /* Gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gear.png; sourceTree = "<group>"; };
 		F591D03317EE1BF800803F54 /* SSVMyschoolChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVMyschoolChecker.h; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		F5A845CD17EE23D2003F9A83 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		F5B580B417FC376500A00461 /* SSVGradesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVGradesTableViewController.h; sourceTree = "<group>"; };
 		F5B580B517FC376500A00461 /* SSVGradesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVGradesTableViewController.m; sourceTree = "<group>"; };
+		F5CD6FEE18144A4700F2781B /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		F5D4725617ED10600043DDC9 /* MyRU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D4725917ED10600043DDC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5D4725B17ED10600043DDC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -258,8 +258,8 @@
 				983F497917F8B23C002A6583 /* centered_white.png */,
 				F5658B9717EFAB12005845E4 /* Gear.png */,
 				9832A881180ECF2600C676C9 /* greencheck.png */,
+				F5CD6FEE18144A4700F2781B /* cross.png */,
 				F5658B9117EFA703005845E4 /* check.png */,
-				F5658B8F17EFA6B1005845E4 /* Cross.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -367,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5CD6FEF18144A4700F2781B /* cross.png in Resources */,
 				F5EABA531808295200DDBB98 /* SSVGradeCell.xib in Resources */,
 				F5658B9817EFAB12005845E4 /* Gear.png in Resources */,
 				9832A882180ECF2600C676C9 /* greencheck.png in Resources */,
@@ -376,7 +377,6 @@
 				F5307D9F17F4D09100114E7A /* SSVLoginViewController.xib in Resources */,
 				F5D4727217ED10600043DDC9 /* Images.xcassets in Resources */,
 				F5E2FA5B17EF818C007B5CBF /* SSVCell.xib in Resources */,
-				F5658B9017EFA6B1005845E4 /* Cross.png in Resources */,
 				F5EABA4418060D5500DDBB98 /* Files@2x.png in Resources */,
 				983F497A17F8B23C002A6583 /* centered_white.png in Resources */,
 				F5D4726417ED10600043DDC9 /* InfoPlist.strings in Resources */,

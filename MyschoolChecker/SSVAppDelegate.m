@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Kári Tristan Helgason. All rights reserved.
 //
 
+#import <dispatch/dispatch.h>
 #import "SSVAppDelegate.h"
 #import "SSVTableViewController.h"
 #import "SSVLoginViewController.h"
@@ -69,6 +70,7 @@
     return YES;
 
 }
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
