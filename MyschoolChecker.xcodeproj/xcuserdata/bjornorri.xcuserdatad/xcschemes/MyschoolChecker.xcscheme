@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F5D4725517ED105F0043DDC9"
-               BuildableName = "iSchool.app"
+               BuildableName = "MyRU.app"
                BlueprintName = "MyschoolChecker"
                ReferencedContainer = "container:MyschoolChecker.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5D4725517ED105F0043DDC9"
-            BuildableName = "iSchool.app"
+            BuildableName = "MyRU.app"
             BlueprintName = "MyschoolChecker"
             ReferencedContainer = "container:MyschoolChecker.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5D4725517ED105F0043DDC9"
-            BuildableName = "iSchool.app"
+            BuildableName = "MyRU.app"
             BlueprintName = "MyschoolChecker"
             ReferencedContainer = "container:MyschoolChecker.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5D4725517ED105F0043DDC9"
-            BuildableName = "iSchool.app"
+            BuildableName = "MyRU.app"
             BlueprintName = "MyschoolChecker"
             ReferencedContainer = "container:MyschoolChecker.xcodeproj">
          </BuildableReference>
