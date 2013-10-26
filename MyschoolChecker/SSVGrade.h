@@ -16,4 +16,8 @@
 @property(nonatomic, copy)NSString* feedback;
 @property(nonatomic, copy)NSString* inCourse;
 
+-(NSString*)getCourse;
+-(NSString*)getRank;
+-(NSString*)getGrade;
+
 @end

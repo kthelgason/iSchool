@@ -13,6 +13,8 @@
 		98A5D8BA18156E9800DE94E9 /* SSVRestartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A5D8B918156E9800DE94E9 /* SSVRestartViewController.m */; };
 		98A5D8BC181577DF00DE94E9 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 98A5D8BB181577DF00DE94E9 /* launch.png */; };
 		98A5D8BE181577E900DE94E9 /* launch5.png in Resources */ = {isa = PBXBuildFile; fileRef = 98A5D8BD181577E900DE94E9 /* launch5.png */; };
+		98D7508F18159BC000376FDD /* SSVGradeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D7508E18159BC000376FDD /* SSVGradeDetailViewController.m */; };
+		98D7509118159BD300376FDD /* SSVGradeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98D7509018159BD300376FDD /* SSVGradeDetailViewController.xib */; };
 		F5307D9E17F4D09100114E7A /* SSVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5307D9C17F4D09100114E7A /* SSVLoginViewController.m */; };
 		F5307D9F17F4D09100114E7A /* SSVLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */; };
 		F5658B9817EFAB12005845E4 /* Gear.png in Resources */ = {isa = PBXBuildFile; fileRef = F5658B9717EFAB12005845E4 /* Gear.png */; };
@@ -69,6 +71,9 @@
 		98A5D8B918156E9800DE94E9 /* SSVRestartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVRestartViewController.m; sourceTree = "<group>"; };
 		98A5D8BB181577DF00DE94E9 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		98A5D8BD181577E900DE94E9 /* launch5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch5.png; sourceTree = "<group>"; };
+		98D7508D18159BC000376FDD /* SSVGradeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVGradeDetailViewController.h; sourceTree = "<group>"; };
+		98D7508E18159BC000376FDD /* SSVGradeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVGradeDetailViewController.m; sourceTree = "<group>"; };
+		98D7509018159BD300376FDD /* SSVGradeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVGradeDetailViewController.xib; sourceTree = "<group>"; };
 		F5307D9B17F4D09100114E7A /* SSVLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVLoginViewController.h; sourceTree = "<group>"; };
 		F5307D9C17F4D09100114E7A /* SSVLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVLoginViewController.m; sourceTree = "<group>"; };
 		F5307D9D17F4D09100114E7A /* SSVLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVLoginViewController.xib; sourceTree = "<group>"; };
@@ -203,6 +208,9 @@
 				F5D4726917ED10600043DDC9 /* SSVAppDelegate.m */,
 				F5B580B417FC376500A00461 /* SSVGradesTableViewController.h */,
 				F5B580B517FC376500A00461 /* SSVGradesTableViewController.m */,
+				98D7508D18159BC000376FDD /* SSVGradeDetailViewController.h */,
+				98D7508E18159BC000376FDD /* SSVGradeDetailViewController.m */,
+				98D7509018159BD300376FDD /* SSVGradeDetailViewController.xib */,
 				F5E85DB217F0E63200893105 /* SSVDetailViewController.h */,
 				F5E85DB317F0E63200893105 /* SSVDetailViewController.m */,
 				F5E85DB417F0E63200893105 /* SSVDetailViewController.xib */,
@@ -380,6 +388,7 @@
 				F5EABA531808295200DDBB98 /* SSVGradeCell.xib in Resources */,
 				98A5D8B718156B4300DE94E9 /* SSVRestartViewController.xib in Resources */,
 				F5658B9817EFAB12005845E4 /* Gear.png in Resources */,
+				98D7509118159BD300376FDD /* SSVGradeDetailViewController.xib in Resources */,
 				9832A882180ECF2600C676C9 /* greencheck.png in Resources */,
 				F59AEF8317F9826400D6AA28 /* Main.storyboard in Resources */,
 				98A5D8BC181577DF00DE94E9 /* launch.png in Resources */,
@@ -415,6 +424,7 @@
 				F5A845CC17EE235E003F9A83 /* XPathQuery.m in Sources */,
 				F5E85DB517F0E63200893105 /* SSVDetailViewController.m in Sources */,
 				F5307D9E17F4D09100114E7A /* SSVLoginViewController.m in Sources */,
+				98D7508F18159BC000376FDD /* SSVGradeDetailViewController.m in Sources */,
 				F5D4726617ED10600043DDC9 /* main.m in Sources */,
 				F5E2FA5917EF8166007B5CBF /* SSVCell.m in Sources */,
 				F5D4726A17ED10600043DDC9 /* SSVAppDelegate.m in Sources */,

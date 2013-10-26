@@ -13,6 +13,7 @@
 #import "SSVGrade.h"
 #import "SSVMyschoolChecker.h"
 #import "SSVRestartViewController.h"
+#import "SSVGradeDetailViewController.h"
 
 @interface SSVGradesTableViewController ()
 
@@ -97,7 +98,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SSVGradeCell* cell = [tableView dequeueReusableCellWithIdentifier:@"SSVGradeCell"];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     NSArray* gradesInCourse = [[[SSVDataStore sharedStore] allGrades] objectAtIndex:[indexPath section]];
     SSVGrade* grade = [gradesInCourse objectAtIndex:[indexPath row]];
     [[cell assignmentNameLabel] setText:[grade assignmentName]];
@@ -107,6 +108,20 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    SSVGradeDetailViewController* detailView = [[SSVGradeDetailViewController alloc] init];
+    
+    NSArray* items = [[SSVDataStore sharedStore] allGrades];
+    SSVGrade* selected = [[items objectAtIndex:[indexPath section]] objectAtIndex:[indexPath row]];
+    
+    detailView.grade = selected;
+    
+    // Push detailview on the viewController stack
+    [[self navigationController] pushViewController:detailView animated:YES];
+}
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [[[SSVDataStore sharedStore] allGrades] count];
 }
@@ -115,7 +130,7 @@
     
     NSArray* array = [[[SSVDataStore sharedStore] allGrades] objectAtIndex:section];
     if(array.count > 0){
-        return [[array objectAtIndex:0] inCourse];
+        return [[array objectAtIndex:0] getCourse];
     }
     return @"??";
 }
