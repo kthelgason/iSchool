@@ -34,7 +34,7 @@ dispatch_queue_t backgroundQueue;
         [tabItem setTitle:@"Assignments"];
         [tabItem setImage:[UIImage imageNamed:@"Files.png"]];
         
-        UIBarButtonItem *logOutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStyleBordered target:self action:@selector(logOut)];
+        UIBarButtonItem *logOutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStyleBordered target:self action:@selector(didClickLogOutButton)];
         self.navigationItem.rightBarButtonItem = logOutButton;
     }
     return self;
@@ -100,13 +100,13 @@ dispatch_queue_t backgroundQueue;
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     // Create instance of UITableViewCell
     SSVCell* cell = [tableView dequeueReusableCellWithIdentifier:@"SSVCell"];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     SSVAssignment* assignment = [[[SSVDataStore sharedStore] allAssignments] objectAtIndex:[indexPath row]];
     [[cell titleLabel] setText:[assignment title]];
     [[cell courseNameLabel] setText:[assignment courseName]];
     [[cell dueDateLabel] setText:[assignment dueDate]];
     if([assignment.handedIn  isEqual: @"Óskilað"]){
-        [[cell completedImage] setImage:nil];
+        [[cell completedImage] setImage:[assignment notDoneImage]];
     } else {
         [[cell completedImage] setImage:[assignment doneImage]];
     }
@@ -125,6 +125,13 @@ dispatch_queue_t backgroundQueue;
     [[self refreshControl]endRefreshing];
 }
 
+-(void)didClickLogOutButton
+{
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Log Out" message:@"Are you sure you want to log out?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [alert show];
+}
+
+
 -(void)logOut
 {
     [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
@@ -140,6 +147,16 @@ dispatch_queue_t backgroundQueue;
         [store emptyDataStoreGrades];
         [store populateGrades:[SSVMyschoolChecker fetchGrades]];
     });
+}
+
+
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 1)
+    {
+        [self logOut];
+    }
 }
 
 // Code for table header. Trying to go without for now

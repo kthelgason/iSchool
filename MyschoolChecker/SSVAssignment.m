@@ -17,6 +17,7 @@
     self = [super init];
     if(self){
         [self setDoneImage:[UIImage imageNamed:@"greencheck.png"]];
+        [self setNotDoneImage:[UIImage imageNamed:@"cross.png"]];
     }
     return self;
 }
