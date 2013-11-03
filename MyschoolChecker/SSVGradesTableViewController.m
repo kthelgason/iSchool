@@ -98,7 +98,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SSVGradeCell* cell = [tableView dequeueReusableCellWithIdentifier:@"SSVGradeCell"];
-    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     NSArray* gradesInCourse = [[[SSVDataStore sharedStore] allGrades] objectAtIndex:[indexPath section]];
     SSVGrade* grade = [gradesInCourse objectAtIndex:[indexPath row]];
     [[cell assignmentNameLabel] setText:[grade assignmentName]];

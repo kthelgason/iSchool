@@ -40,11 +40,20 @@ dispatch_queue_t backgroundQueue;
     return self;
 }
 
--(void)viewWillAppear:(BOOL)animated{
+-(void)viewWillAppear:(BOOL)animated
+{
     if([[NSUserDefaults standardUserDefaults] stringForKey:@"Authentication"] && [[[SSVDataStore sharedStore] allAssignments] count] == 0){
         backgroundQueue = dispatch_queue_create("is.sigsegv.ischool.bg", NULL);
         [self process];
     }
+    
+    // Deselect any selected cell (for when the detail view gets popped off).
+    NSIndexPath* selection = [self.tableView indexPathForSelectedRow];
+	if (selection)
+    {
+		[self.tableView deselectRowAtIndexPath:selection animated:YES];
+    }
+
     
 }
 
@@ -100,7 +109,6 @@ dispatch_queue_t backgroundQueue;
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     // Create instance of UITableViewCell
     SSVCell* cell = [tableView dequeueReusableCellWithIdentifier:@"SSVCell"];
-    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     SSVAssignment* assignment = [[[SSVDataStore sharedStore] allAssignments] objectAtIndex:[indexPath row]];
     [[cell titleLabel] setText:[assignment title]];
     [[cell courseNameLabel] setText:[assignment courseName]];
