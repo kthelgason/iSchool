@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSVLoginViewController">
@@ -63,7 +63,7 @@
                         <constraint firstAttribute="height" constant="151" id="3aV-pz-wxF"/>
                     </constraints>
                 </imageView>
-                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Invalid authentication, try again." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9d-uF-4hA">
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid authentication, try again." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9d-uF-4hA">
                     <rect key="frame" x="60" y="286" width="201" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -82,10 +82,13 @@
                 <constraint firstItem="sUh-4M-EmV" firstAttribute="trailing" secondItem="wYJ-P0-5rG" secondAttribute="trailing" id="Y69-aO-Psu"/>
                 <constraint firstItem="sUh-4M-EmV" firstAttribute="centerX" secondItem="ZGA-X5-ymr" secondAttribute="centerX" id="fB6-YD-pvs"/>
                 <constraint firstItem="ZGA-X5-ymr" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="16" id="hAl-Ys-SkD"/>
+                <constraint firstAttribute="trailing" secondItem="A9d-uF-4hA" secondAttribute="trailing" constant="59" id="lWj-pG-YI0"/>
                 <constraint firstItem="wYJ-P0-5rG" firstAttribute="top" secondItem="ZGA-X5-ymr" secondAttribute="bottom" constant="18" id="npY-n3-zo7"/>
                 <constraint firstAttribute="trailing" secondItem="ZGA-X5-ymr" secondAttribute="trailing" constant="16" id="pCm-qe-zeo"/>
                 <constraint firstItem="sUh-4M-EmV" firstAttribute="top" secondItem="A9d-uF-4hA" secondAttribute="bottom" constant="8" id="rNl-sS-APK"/>
+                <constraint firstItem="A9d-uF-4hA" firstAttribute="top" secondItem="TTZ-74-dvg" secondAttribute="bottom" constant="-2" id="rnx-n1-nHV"/>
                 <constraint firstAttribute="bottom" secondItem="sUh-4M-EmV" secondAttribute="bottom" constant="214" id="sIR-ZP-21q"/>
+                <constraint firstItem="A9d-uF-4hA" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="60" id="yA2-C8-8xm"/>
                 <constraint firstItem="sUh-4M-EmV" firstAttribute="top" secondItem="TTZ-74-dvg" secondAttribute="bottom" constant="27" id="yXq-SR-5Sw"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
