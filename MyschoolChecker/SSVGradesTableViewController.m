@@ -30,7 +30,7 @@
         [tabItem setTitle:@"Grades"];
         [tabItem setImage:[UIImage imageNamed:@"Favorites.png"]];
         
-        UIBarButtonItem *logOutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStyleBordered target:self action:@selector(logOut)];
+        UIBarButtonItem *logOutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStyleBordered target:self action:@selector(didClickLogOutButton)];
         self.navigationItem.rightBarButtonItem = logOutButton;
     }
     return self;
@@ -98,7 +98,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SSVGradeCell* cell = [tableView dequeueReusableCellWithIdentifier:@"SSVGradeCell"];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     NSArray* gradesInCourse = [[[SSVDataStore sharedStore] allGrades] objectAtIndex:[indexPath section]];
     SSVGrade* grade = [gradesInCourse objectAtIndex:[indexPath row]];
     [[cell assignmentNameLabel] setText:[grade assignmentName]];
@@ -141,6 +140,19 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     SSVRestartViewController* restartScreen = [[SSVRestartViewController alloc] init];
     [self presentViewController:restartScreen animated:YES completion:nil];
+}
+
+-(void)didClickLogOutButton
+{
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Log Out" message:@"Are you sure you want to log out?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [alert show];
+}
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 1)
+    {
+        [self logOut];
+    }
 }
 
 @end
