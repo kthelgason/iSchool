@@ -42,7 +42,7 @@ dispatch_queue_t backgroundQueue;
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    if([[NSUserDefaults standardUserDefaults] stringForKey:@"Authentication"] && [[[SSVDataStore sharedStore] allAssignments] count] == 0){
+    if([[NSUserDefaults standardUserDefaults] stringForKey:@"Authentication"] && [[[SSVDataStore sharedStore] allGrades] count] == 0){
         backgroundQueue = dispatch_queue_create("is.sigsegv.ischool.bg", NULL);
         [self process];
     }
@@ -53,8 +53,6 @@ dispatch_queue_t backgroundQueue;
     {
 		[self.tableView deselectRowAtIndexPath:selection animated:YES];
     }
-
-    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
