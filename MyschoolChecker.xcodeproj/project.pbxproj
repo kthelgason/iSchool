@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9832A882180ECF2600C676C9 /* greencheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 9832A881180ECF2600C676C9 /* greencheck.png */; };
 		983F497A17F8B23C002A6583 /* centered_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 983F497917F8B23C002A6583 /* centered_white.png */; };
+		987E23AC182994DB0039DC40 /* SSVMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E23AB182994DB0039DC40 /* SSVMenuViewController.m */; };
+		987E23AE182994FE0039DC40 /* SSVMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 987E23AD182994FE0039DC40 /* SSVMenuViewController.xib */; };
 		98A5D8B718156B4300DE94E9 /* SSVRestartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98A5D8B618156B4300DE94E9 /* SSVRestartViewController.xib */; };
 		98A5D8BA18156E9800DE94E9 /* SSVRestartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A5D8B918156E9800DE94E9 /* SSVRestartViewController.m */; };
 		98A5D8BC181577DF00DE94E9 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 98A5D8BB181577DF00DE94E9 /* launch.png */; };
@@ -67,6 +69,9 @@
 /* Begin PBXFileReference section */
 		9832A881180ECF2600C676C9 /* greencheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greencheck.png; sourceTree = "<group>"; };
 		983F497917F8B23C002A6583 /* centered_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centered_white.png; sourceTree = "<group>"; };
+		987E23AA182994DB0039DC40 /* SSVMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVMenuViewController.h; sourceTree = "<group>"; };
+		987E23AB182994DB0039DC40 /* SSVMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVMenuViewController.m; sourceTree = "<group>"; };
+		987E23AD182994FE0039DC40 /* SSVMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVMenuViewController.xib; sourceTree = "<group>"; };
 		98A5D8B618156B4300DE94E9 /* SSVRestartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSVRestartViewController.xib; sourceTree = "<group>"; };
 		98A5D8B818156E9800DE94E9 /* SSVRestartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSVRestartViewController.h; sourceTree = "<group>"; };
 		98A5D8B918156E9800DE94E9 /* SSVRestartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSVRestartViewController.m; sourceTree = "<group>"; };
@@ -231,6 +236,9 @@
 				F5D4729117ED15790043DDC9 /* SSVDataStore.h */,
 				F5D4728E17ED12030043DDC9 /* SSVTableViewController.h */,
 				F5D4728F17ED12030043DDC9 /* SSVTableViewController.m */,
+				987E23AA182994DB0039DC40 /* SSVMenuViewController.h */,
+				987E23AB182994DB0039DC40 /* SSVMenuViewController.m */,
+				987E23AD182994FE0039DC40 /* SSVMenuViewController.xib */,
 				98A5D8B618156B4300DE94E9 /* SSVRestartViewController.xib */,
 				98A5D8B818156E9800DE94E9 /* SSVRestartViewController.h */,
 				98A5D8B918156E9800DE94E9 /* SSVRestartViewController.m */,
@@ -405,6 +413,7 @@
 				F5EABA4418060D5500DDBB98 /* Files@2x.png in Resources */,
 				983F497A17F8B23C002A6583 /* centered_white.png in Resources */,
 				98A5D8BE181577E900DE94E9 /* launch5.png in Resources */,
+				987E23AE182994FE0039DC40 /* SSVMenuViewController.xib in Resources */,
 				F5D4726417ED10600043DDC9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +443,7 @@
 				F5E2FA5917EF8166007B5CBF /* SSVCell.m in Sources */,
 				F5D4726A17ED10600043DDC9 /* SSVAppDelegate.m in Sources */,
 				F5EABA511808293E00DDBB98 /* SSVGradeCell.m in Sources */,
+				987E23AC182994DB0039DC40 /* SSVMenuViewController.m in Sources */,
 				98A5D8BA18156E9800DE94E9 /* SSVRestartViewController.m in Sources */,
 				F5B580B617FC376500A00461 /* SSVGradesTableViewController.m in Sources */,
 				F591D03517EE1BF800803F54 /* SSVMyschoolChecker.m in Sources */,

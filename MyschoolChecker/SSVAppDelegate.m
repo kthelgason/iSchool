@@ -14,6 +14,7 @@
 #import "SSVMyschoolChecker.h"
 #import "SSVGradesTableViewController.h"
 #import "SSVDataStore.h"
+#import "SSVMenuViewController.h"
 
 @implementation SSVAppDelegate
 
@@ -32,6 +33,9 @@
     SSVTableViewController* tvc = [[SSVTableViewController alloc ] initWithStyle:UITableViewStylePlain];
     SSVGradesTableViewController* gtvc = [[SSVGradesTableViewController alloc]init];
     
+    // Create SSVMenuViewController
+    SSVMenuViewController* mvc = [[SSVMenuViewController alloc] init];
+    
     
     // Create UINavigationController
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:tvc];
@@ -39,7 +43,7 @@
 
     [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
     
-    [tbc setViewControllers:[NSArray arrayWithObjects:nav, nav2, nil]];
+    [tbc setViewControllers:[NSArray arrayWithObjects:nav, nav2, mvc, nil]];
 
     [[self window] setRootViewController:tbc];
     

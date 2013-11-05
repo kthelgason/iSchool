@@ -69,6 +69,10 @@ dispatch_queue_t backgroundQueue;
 
 -(void)viewDidLoad{
     
+    //
+    [SSVMyschoolChecker fetchMowl];
+    //
+    
     [super viewDidLoad];
     UIRefreshControl* refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
