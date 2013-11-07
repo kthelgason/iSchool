@@ -30,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     NSMutableString* urlString = [NSMutableString stringWithString:@"https://myschool.ru.is/myschool/"];
     [urlString appendString:[assignment assignmentURL]];
 
@@ -63,5 +64,6 @@
     assignment = a;
     [[self navigationItem] setTitle:[assignment title]];
 }
+
 
 @end

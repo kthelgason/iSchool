@@ -14,6 +14,7 @@
 {
     UIWebView* webView;
 }
+
 @property(strong, nonatomic)SSVAssignment* assignment;
 
 @end
