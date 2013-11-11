@@ -17,7 +17,7 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="221" translatesAutoresizingMaskIntoConstraints="NO" id="rXi-ee-hgo">
                     <rect key="frame" x="50" y="221" width="221" height="164"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">To log out you properly you will have to restart the app. This is due to a problem with the way MySchool handles authentication. Sorry for the inconvenience.</string>
+                    <string key="text">To log out properly you must restart the app. This is due to a problem with the way MySchool handles authentication. Sorry for the inconvenience.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
