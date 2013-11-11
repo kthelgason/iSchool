@@ -106,9 +106,8 @@
 
 // shiiiiiiiiiiiit.....
 
--(void)populateGrades:(NSArray*)data{
-    
-    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:@"\\bT-[0-9]{3}-.*\\b" options:NSRegularExpressionCaseInsensitive error:nil];
+-(void)populateGrades:(NSArray*)data
+{
     NSMutableArray* grades = [[NSMutableArray alloc] init];
     NSString* currentCourse = nil;
     for (TFHppleElement* element in data) {
@@ -117,8 +116,7 @@
             int counter = 0;
             for(TFHppleElement* child in [element children]){
                 if([child text]){
-                    NSTextCheckingResult *match = [regex firstMatchInString:[child text] options:0 range:NSMakeRange(0, [[child text] length])];
-                    if(match){
+                    if([child.tagName isEqualToString:@"th"]){
                         currentCourse = [child text];
                         continue;
                     }
