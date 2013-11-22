@@ -71,7 +71,10 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     // Hide all unnecessary elements on the page.
-    NSString* js = @"var page=document.getElementsByClassName('storycontent')[0];while(page.tagName!='body'){var sibling=page.parentNode.firstChild;for(;sibling;sibling=sibling.nextSibling){if(sibling.nodeType==1&&sibling!==page&&sibling.id != 'hd')sibling.style.display='none'}page=page.parentNode}";
+    NSString* js = @"var page=document.getElementsByClassName('item entry')[0];var bd=document.getElementById('bd');bd.innerHTML=page.innerHTML;var bla=document.getElementById('doc3');bla.setAttribute('id', '');bla.setAttribute('class', '');document.getElementById('ft').style.display='none'";
+    
+    
+    /*@"var page=document.getElementsByClassName('storycontent')[0];while(page.tagName!='body'){var sibling=page.parentNode.firstChild;for(;sibling;sibling=sibling.nextSibling){if(sibling.nodeType==1&&sibling!==page&&sibling.id != 'hd')sibling.style.display='none'}page=page.parentNode}";*/
     [webView stringByEvaluatingJavaScriptFromString:js];
     
     // The webView is initially clear. This is done to minimize the visibility of the javascript hiding.

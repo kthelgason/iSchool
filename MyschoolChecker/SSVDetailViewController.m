@@ -16,7 +16,7 @@
 
 @implementation SSVDetailViewController
 
-@synthesize assignment;
+@synthesize assignment, webView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,6 +52,13 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     NSLog(@"did start load");
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)theWebView
+{
+    NSString* js = @"$('.ruHeader a').click(function(e){e.preventDefault()});$('.ruLeft').hide();$('.ruRight').hide();$('#headersearch').hide()";
+    [theWebView stringByEvaluatingJavaScriptFromString:js];
+    [theWebView setAlpha:1.0];
 }
 
 
