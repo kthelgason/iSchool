@@ -56,7 +56,16 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)theWebView
 {
-    NSString* js = @"$('.ruHeader a').click(function(e){e.preventDefault()});$('.ruLeft').hide();$('.ruRight').hide();$('#headersearch').hide()";
+    NSMutableString* js = [NSMutableString stringWithString:@"$('.ruHeader a').click(function(e){e.preventDefault()});$('.ruLeft').hide();$('.ruRight').hide();$('.ruFooter').hide();$('#headersearch').hide();$('.level1').hide()"];
+    
+    
+    if(![[NSUserDefaults standardUserDefaults] valueForKey:@"Zoomed"])
+    {
+        [js appendString:@";$('.resetSize').click();$('.increaseSize').click();$('.increaseSize').click()"];
+        [[NSUserDefaults standardUserDefaults] setObject:@"zoomed" forKey:@"Zoomed"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
     [theWebView stringByEvaluatingJavaScriptFromString:js];
     [theWebView setAlpha:1.0];
 }

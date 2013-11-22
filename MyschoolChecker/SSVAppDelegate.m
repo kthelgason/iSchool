@@ -64,15 +64,18 @@
         
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Authentication"];
         
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Zoomed"];
+        
         // sync the defaults to disk
         [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
     //[[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
+    //[[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Zoomed"];
     //[[NSUserDefaults standardUserDefaults] synchronize];
     [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:dateKey];
-    
+    NSLog([[NSUserDefaults standardUserDefaults] valueForKey:@"Authentication"]);
     return YES;
 
 }
