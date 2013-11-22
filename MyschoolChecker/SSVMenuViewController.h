@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SSVMenuViewController : UIViewController
+@interface SSVMenuViewController : UIViewController<UIWebViewDelegate>
 
 @end

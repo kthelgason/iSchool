@@ -64,38 +64,5 @@
     return [[SSVMyschoolChecker fetchAssignments] count] == 0 ? NO : YES;
 }
 
-+ (NSArray*)fetchMowl
-{
-    NSLog(@"Fetching mowl data");
-    NSURL* mowlConnection = [NSURL URLWithString:@"http://malid.ru.is"];
-    NSMutableURLRequest* urlRequest = [[NSMutableURLRequest alloc] initWithURL:mowlConnection];
-    NSData* requestData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
-    
-    NSMutableArray* Nodes;
-    
-    if(requestData)
-    {
-        TFHpple* htmlParser = [TFHpple hppleWithHTMLData:requestData];
-        NSString* header = @"//div[@class='item entry']/div[@class='itemhead']/h3";
-        
-        Nodes = [NSMutableArray arrayWithArray:[htmlParser searchWithXPathQuery:header]];
-        
-        NSString* food = @"//div[@class='item entry']/div[@class='storycontent']/p";
-        
-        [Nodes addObjectsFromArray:[htmlParser searchWithXPathQuery:food]];
-        
-        for(TFHppleElement* element in Nodes)
-        {
-            if([element hasChildren])
-            {
-                int index = [Nodes indexOfObject:element];
-                [Nodes setObject:[[element children] firstObject] atIndexedSubscript:index];
-            }
-        }
-    }
-    
-    return Nodes;
-}
-
 
 @end

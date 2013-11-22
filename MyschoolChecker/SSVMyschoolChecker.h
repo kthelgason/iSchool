@@ -12,7 +12,6 @@
 
 + (NSArray*)fetchAssignments;
 + (NSArray*)fetchGrades;
-+ (NSArray*)fetchMowl;
 
 + (BOOL)checkAuthstring:(NSString*)authString;
 

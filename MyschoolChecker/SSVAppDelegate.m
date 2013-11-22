@@ -33,6 +33,7 @@
     SSVTableViewController* tvc = [[SSVTableViewController alloc ] initWithStyle:UITableViewStylePlain];
     SSVGradesTableViewController* gtvc = [[SSVGradesTableViewController alloc]init];
     
+    
     // Create SSVMenuViewController
     SSVMenuViewController* mvc = [[SSVMenuViewController alloc] init];
     
@@ -40,10 +41,11 @@
     // Create UINavigationController
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:tvc];
     UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:gtvc];
+    UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:mvc];
 
     [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
     
-    [tbc setViewControllers:[NSArray arrayWithObjects:nav, nav2, mvc, nil]];
+    [tbc setViewControllers:[NSArray arrayWithObjects:nav, nav2, nav3, nil]];
 
     [[self window] setRootViewController:tbc];
     
