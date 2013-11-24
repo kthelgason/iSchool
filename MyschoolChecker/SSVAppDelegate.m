@@ -75,9 +75,7 @@
     //[[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Zoomed"];
     //[[NSUserDefaults standardUserDefaults] synchronize];
     [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:dateKey];
-    NSLog([[NSUserDefaults standardUserDefaults] valueForKey:@"Authentication"]);
     return YES;
-
 }
 
 							
