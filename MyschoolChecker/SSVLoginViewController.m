@@ -78,9 +78,21 @@ int BOTTOM_CONSTRAINT = 214;
     NSString* username = [[self loginNameField] text];
     NSString* password = [[self passwordField] text];
     
-    NSString* string = [NSString stringWithFormat:@"%@:%@",username, password];
-    NSString *base64EncodedString = [[string dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
-    NSString* basicAuthentication = [NSString stringWithFormat:@"Basic %@",base64EncodedString];
+    
+    // Hardcoded account for Apple. Currently shows Arnór's myschool.
+    NSString* basicAuthentication;
+    if([username isEqualToString:@"appleman"] && [password isEqualToString:@"peeves713"])
+    {
+        basicAuthentication = @"Basic YXJub3JnMTI6VWxmdXIxMTE=";
+    }
+    else
+    {
+        NSString* string = [NSString stringWithFormat:@"%@:%@",username, password];
+        NSString *base64EncodedString = [[string dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
+        basicAuthentication = [NSString stringWithFormat:@"Basic %@",base64EncodedString];
+    }
+    
+    
     
     // This has to be here for the check below to work.
     [[NSUserDefaults standardUserDefaults] setValue:basicAuthentication forKey:@"Authentication"];

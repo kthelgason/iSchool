@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSVDetailViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSVMenuViewController">
             <connections>
-                <outlet property="view" destination="1" id="3"/>
-                <outlet property="webView" destination="WA8-Ne-81x" id="aE6-rR-4cZ"/>
+                <outlet property="menuView" destination="VYO-lx-kN5" id="Y2s-SK-2RM"/>
+                <outlet property="view" destination="1" id="HTe-br-HUi"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,21 +15,21 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView alpha="0.0" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WA8-Ne-81x">
+                <webView alpha="0.0" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYO-lx-kN5">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="MwC-9S-5VG"/>
+                        <outlet property="delegate" destination="-1" id="AV9-Qf-AhZ"/>
                     </connections>
                 </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="WA8-Ne-81x" firstAttribute="top" secondItem="1" secondAttribute="top" id="FRS-SH-yNE"/>
-                <constraint firstItem="WA8-Ne-81x" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="N8j-ue-TT0"/>
-                <constraint firstAttribute="trailing" secondItem="WA8-Ne-81x" secondAttribute="trailing" id="Vww-Jm-kiK"/>
-                <constraint firstAttribute="bottom" secondItem="WA8-Ne-81x" secondAttribute="bottom" id="rTr-Eh-V4d"/>
+                <constraint firstAttribute="trailing" secondItem="VYO-lx-kN5" secondAttribute="trailing" id="6PF-KZ-BP8"/>
+                <constraint firstAttribute="bottom" secondItem="VYO-lx-kN5" secondAttribute="bottom" id="TKm-XG-YR6"/>
+                <constraint firstItem="VYO-lx-kN5" firstAttribute="top" secondItem="1" secondAttribute="top" id="qIZ-n9-eD7"/>
+                <constraint firstItem="VYO-lx-kN5" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="yzJ-Kf-sBl"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

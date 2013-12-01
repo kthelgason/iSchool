@@ -12,8 +12,9 @@
 
 @interface SSVDetailViewController : UIViewController <UIWebViewDelegate>
 {
-    UIWebView* webView;
+    
 }
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @property(strong, nonatomic)SSVAssignment* assignment;
 

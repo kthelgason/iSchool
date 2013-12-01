@@ -14,6 +14,7 @@
 #import "SSVMyschoolChecker.h"
 #import "SSVGradesTableViewController.h"
 #import "SSVDataStore.h"
+#import "SSVMenuViewController.h"
 
 @implementation SSVAppDelegate
 
@@ -33,13 +34,18 @@
     SSVGradesTableViewController* gtvc = [[SSVGradesTableViewController alloc]init];
     
     
+    // Create SSVMenuViewController
+    SSVMenuViewController* mvc = [[SSVMenuViewController alloc] init];
+    
+    
     // Create UINavigationController
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:tvc];
     UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:gtvc];
+    UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:mvc];
 
     [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
     
-    [tbc setViewControllers:[NSArray arrayWithObjects:nav, nav2, nil]];
+    [tbc setViewControllers:[NSArray arrayWithObjects:nav, nav2, nav3, nil]];
 
     [[self window] setRootViewController:tbc];
     
@@ -58,17 +64,18 @@
         
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Authentication"];
         
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Zoomed"];
+        
         // sync the defaults to disk
         [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
     //[[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Authentication"];
+    //[[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Zoomed"];
     //[[NSUserDefaults standardUserDefaults] synchronize];
     [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:dateKey];
-    
     return YES;
-
 }
 
 							
